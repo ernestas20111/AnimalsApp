@@ -1,6 +1,7 @@
 # AnimalsApp - Name still pending
 E-shop to find animals or to gift them
 
+
 ## Team members:
 - Nerijus Pūras
 - Ernestas Ščevinskas
