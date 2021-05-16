@@ -8,3 +8,4 @@ E-shop to find animals or to gift them
 - Aivaras Rinkevičius
 - Justas Vitkauskas
 - Juozas Vainauskas
+[a relative link](test.md)
