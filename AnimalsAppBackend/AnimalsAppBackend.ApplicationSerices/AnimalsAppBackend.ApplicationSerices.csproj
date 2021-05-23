@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AnimalsAppBackend.Abstractions\AnimalsAppBackend.Abstractions.csproj" />
+    <ProjectReference Include="..\AnimalsAppBackend.ApplicationUtilities\AnimalsAppBackend.ApplicationUtilities.csproj" />
+    <ProjectReference Include="..\AnimalsAppBackend.DataAccess\AnimalsAppBackend.DataAccess.csproj" />
+  </ItemGroup>
+</Project>
