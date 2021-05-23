@@ -9,9 +9,9 @@ namespace AnimalsAppBackend.Controllers
     [Route("[controller]")]
     public class UsersController : ControllerBase
     {
-        private readonly UsersManagementService _usersManagementService;
+        private readonly IUsersManagementService _usersManagementService;
 
-        public UsersController(UsersManagementService usersManagementService)
+        public UsersController(IUsersManagementService usersManagementService)
         {
             _usersManagementService = usersManagementService;
         }

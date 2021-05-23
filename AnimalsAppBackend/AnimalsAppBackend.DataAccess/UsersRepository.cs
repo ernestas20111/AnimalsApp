@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace AnimalsAppBackend.DataAccess
 {
-    public class UsersRepository
+    public class UsersRepository : IUsersRepository
     {
         private readonly AnimalsAppDbContext _dbContext;
 

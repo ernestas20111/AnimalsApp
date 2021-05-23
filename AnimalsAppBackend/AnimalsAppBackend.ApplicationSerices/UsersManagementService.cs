@@ -8,11 +8,11 @@ using System.Threading.Tasks;
 
 namespace AnimalsAppBackend.ApplicationSerices
 {
-    public class UsersManagementService
+    public class UsersManagementService : IUsersManagementService
     {
-        private readonly UsersRepository _usersRepository;
+        private readonly IUsersRepository _usersRepository;
 
-        public UsersManagementService(UsersRepository usersRepository)
+        public UsersManagementService(IUsersRepository usersRepository)
         {
             _usersRepository = usersRepository;
         }

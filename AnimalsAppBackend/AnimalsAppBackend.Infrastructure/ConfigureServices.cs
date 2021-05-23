@@ -8,8 +8,8 @@ namespace AnimalsAppBackend.Infrastructure
     {
         public static void ConfigureApplicationServices(this IServiceCollection services)
         {
-            services.AddScoped<UsersRepository>()
-                .AddScoped<UsersManagementService>();
+            services.AddScoped<IUsersRepository, UsersRepository>()
+                .AddScoped<IUsersManagementService, UsersManagementService>();
         }
     }
 }
