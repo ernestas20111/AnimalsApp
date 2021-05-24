@@ -1,7 +1,7 @@
 using System;
 using Xunit;
 
-namespace AnimalsAppBackend.Tests.DataAccess
+namespace AnimalsAppBackend.Tests.ApplicationServices
 {
     public class UsersManagementServiceTests
     {
