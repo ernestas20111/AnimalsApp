@@ -8,5 +8,6 @@ namespace AnimalsAppBackend.ApplicationSerices
     public interface IUsersManagementService
     {
         Task<Result<GetUserResponse>> GetUser(Guid id);
+        Task<Result<GetAllUsersResponse>> GetAllUsers();
     }
 }

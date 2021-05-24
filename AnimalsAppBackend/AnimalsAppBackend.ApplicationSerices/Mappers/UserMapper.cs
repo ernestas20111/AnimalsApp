@@ -20,5 +20,13 @@ namespace AnimalsAppBackend.ApplicationSerices.Mappers
                 Email = user.Email
             };
         }
+
+        internal static GetAllUsersResponse MapGetAllUsersResponseFromUsers(List<User> users)
+        {
+            return new GetAllUsersResponse
+            {
+                Users = users.Select(user => MapGetUserResponseFromUser(user)).ToList()
+            };
+        }
     }
 }

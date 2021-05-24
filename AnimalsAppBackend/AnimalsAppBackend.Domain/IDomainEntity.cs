@@ -2,8 +2,8 @@
 
 namespace AnimalsAppBackend.Domain
 {
-    public class DomainEntity
+    public interface IDomainEntity
     {
-        public Guid Id { get; set; }
+        Guid Id { get; set; }
     }
 }

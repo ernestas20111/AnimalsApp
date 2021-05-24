@@ -16,12 +16,6 @@ namespace AnimalsAppBackend.Controllers
             _usersManagementService = usersManagementService;
         }
 
-        [HttpGet]
-        public async Task<IActionResult> gets()
-        {
-            return Ok("nice");
-        }
-
         [HttpGet("{id}")]
         public async Task<IActionResult> Get(Guid id)
         {
@@ -30,7 +24,17 @@ namespace AnimalsAppBackend.Controllers
             {
                 return Ok(result);
             }
+            return BadRequest(result);
+        }
 
+        [HttpGet]
+        public async Task<IActionResult> GetAll()
+        {
+            var result = await _usersManagementService.GetAllUsers();
+            if (result.Valid)
+            {
+                return Ok(result);
+            }
             return BadRequest(result);
         }
     }

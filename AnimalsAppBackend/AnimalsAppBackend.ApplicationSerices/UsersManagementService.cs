@@ -2,7 +2,7 @@
 using AnimalsAppBackend.ApplicationSerices.Mappers;
 using AnimalsAppBackend.ApplicationSerices.Responses;
 using AnimalsAppBackend.DataAccess;
-using AnimalsAppBackend.Domain;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Threading.Tasks;
 
@@ -10,16 +10,27 @@ namespace AnimalsAppBackend.ApplicationSerices
 {
     public class UsersManagementService : IUsersManagementService
     {
-        private readonly IUsersRepository _usersRepository;
+        private readonly IUnitOfWork _unitOfWork;
 
-        public UsersManagementService(IUsersRepository usersRepository)
+        public UsersManagementService(IUnitOfWork unitOfWork)
         {
-            _usersRepository = usersRepository;
+            _unitOfWork = unitOfWork;
+        }
+
+        public async Task<Result<GetAllUsersResponse>> GetAllUsers()
+        {
+            var users = await _unitOfWork.Users.GetAll().ToListAsync();
+            if (users is null)
+            {
+                return Result<GetAllUsersResponse>.CreateErrorResult($"No users were found.");
+            }
+
+            return Result<GetAllUsersResponse>.Create(UserMapper.MapGetAllUsersResponseFromUsers(users));
         }
 
         public async Task<Result<GetUserResponse>> GetUser(Guid id)
         {
-            var user = await _usersRepository.Get(id);
+            var user = await _unitOfWork.Users.GetById(id);
             if (user is null)
             {
                 return Result<GetUserResponse>.CreateErrorResult($"User with id {id} was not found.");
