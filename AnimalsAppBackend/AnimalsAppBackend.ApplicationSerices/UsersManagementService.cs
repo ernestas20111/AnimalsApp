@@ -4,6 +4,8 @@ using AnimalsAppBackend.ApplicationSerices.Responses;
 using AnimalsAppBackend.DataAccess;
 using Microsoft.EntityFrameworkCore;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace AnimalsAppBackend.ApplicationSerices
@@ -17,15 +19,15 @@ namespace AnimalsAppBackend.ApplicationSerices
             _unitOfWork = unitOfWork;
         }
 
-        public async Task<Result<GetAllUsersResponse>> GetAllUsers()
+        public async Task<Result<List<GetUserResponse>>> GetAllUsers()
         {
             var users = await _unitOfWork.Users.GetAll().ToListAsync();
             if (users is null)
             {
-                return Result<GetAllUsersResponse>.CreateErrorResult($"No users were found.");
+                return Result<List<GetUserResponse>>.CreateErrorResult($"No users were found.");
             }
 
-            return Result<GetAllUsersResponse>.Create(UserMapper.MapGetAllUsersResponseFromUsers(users));
+            return Result<List<GetUserResponse>>.Create(users.Select(user => UserMapper.MapGetUserResponseFromUser(user)).ToList());
         }
 
         public async Task<Result<GetUserResponse>> GetUser(Guid id)
