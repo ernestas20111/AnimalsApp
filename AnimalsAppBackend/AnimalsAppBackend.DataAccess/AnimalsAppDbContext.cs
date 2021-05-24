@@ -6,6 +6,11 @@ namespace AnimalsAppBackend.DataAccess
 {
     public class AnimalsAppDbContext : DbContext
     {
+        public AnimalsAppDbContext() : base()
+        {
+
+        }
+
         public AnimalsAppDbContext(DbContextOptions<AnimalsAppDbContext> options): base(options)
         {
             
