@@ -1,4 +1,5 @@
-﻿using AnimalsAppBackend.ApplicationSerices;
+﻿using AnimalsAppBackend.Abstractions;
+using AnimalsAppBackend.ApplicationSerices;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Threading.Tasks;
@@ -6,6 +7,7 @@ using System.Threading.Tasks;
 namespace AnimalsAppBackend.Controllers
 {
     [ApiController]
+    [ValidateModel]
     [Route("[controller]")]
     public class UsersController : ControllerBase
     {
