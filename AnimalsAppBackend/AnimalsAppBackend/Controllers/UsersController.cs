@@ -1,6 +1,6 @@
 ﻿using AnimalsAppBackend.Abstractions;
-using AnimalsAppBackend.ApplicationSerices;
-using AnimalsAppBackend.ApplicationSerices.Dtos;
+using AnimalsAppBackend.ApplicationServices;
+using AnimalsAppBackend.ApplicationServices.Dtos;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Threading.Tasks;

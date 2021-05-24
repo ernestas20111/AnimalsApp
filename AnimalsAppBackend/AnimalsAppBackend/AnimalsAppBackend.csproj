@@ -21,7 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\AnimalsAppBackend.ApplicationSerices\AnimalsAppBackend.ApplicationSerices.csproj" />
+    <ProjectReference Include="..\AnimalsAppBackend.ApplicationServices\AnimalsAppBackend.ApplicationServices.csproj" />
     <ProjectReference Include="..\AnimalsAppBackend.Infrastructure\AnimalsAppBackend.Infrastructure.csproj" />
   </ItemGroup>
 

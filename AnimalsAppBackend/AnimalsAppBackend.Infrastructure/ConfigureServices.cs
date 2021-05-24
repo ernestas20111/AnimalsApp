@@ -1,4 +1,4 @@
-﻿using AnimalsAppBackend.ApplicationSerices;
+﻿using AnimalsAppBackend.ApplicationServices;
 using AnimalsAppBackend.DataAccess;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.DependencyInjection;

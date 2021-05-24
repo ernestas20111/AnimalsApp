@@ -1,6 +1,6 @@
-﻿using AnimalsAppBackend.ApplicationSerices.Dtos;
-using AnimalsAppBackend.ApplicationSerices.Requests;
-using AnimalsAppBackend.ApplicationSerices.Responses;
+﻿using AnimalsAppBackend.ApplicationServices.Dtos;
+using AnimalsAppBackend.ApplicationServices.Requests;
+using AnimalsAppBackend.ApplicationServices.Responses;
 using AnimalsAppBackend.Domain;
 using System;
 using System.Collections.Generic;
@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AnimalsAppBackend.ApplicationSerices.Mappers
+namespace AnimalsAppBackend.ApplicationServices.Mappers
 {
     public static class UserMapper
     {

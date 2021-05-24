@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AnimalsAppBackend.ApplicationSerices.Dtos
+namespace AnimalsAppBackend.ApplicationServices.Dtos
 {
     public class UserDto
     {

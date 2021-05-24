@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AnimalsAppBackend.ApplicationSerices.Responses
+namespace AnimalsAppBackend.ApplicationServices.Responses
 {
     public class GetUserResponse
     {

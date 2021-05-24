@@ -1,7 +1,6 @@
 ﻿using AnimalsAppBackend.Abstractions;
-using AnimalsAppBackend.ApplicationSerices.Dtos;
-using AnimalsAppBackend.ApplicationSerices.Mappers;
-using AnimalsAppBackend.ApplicationSerices.Responses;
+using AnimalsAppBackend.ApplicationServices.Dtos;
+using AnimalsAppBackend.ApplicationServices.Mappers;
 using AnimalsAppBackend.DataAccess;
 using AnimalsAppBackend.Domain;
 using Microsoft.EntityFrameworkCore;
@@ -10,7 +9,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace AnimalsAppBackend.ApplicationSerices
+namespace AnimalsAppBackend.ApplicationServices
 {
     public class UsersManagementService : IUsersManagementService
     {

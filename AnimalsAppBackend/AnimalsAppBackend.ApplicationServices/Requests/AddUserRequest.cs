@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AnimalsAppBackend.ApplicationSerices.Requests
+namespace AnimalsAppBackend.ApplicationServices.Requests
 {
     public class AddUserRequest
     {

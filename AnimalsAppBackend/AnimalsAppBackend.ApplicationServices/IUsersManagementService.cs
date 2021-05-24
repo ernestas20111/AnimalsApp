@@ -1,11 +1,11 @@
 ﻿using AnimalsAppBackend.Abstractions;
-using AnimalsAppBackend.ApplicationSerices.Dtos;
-using AnimalsAppBackend.ApplicationSerices.Responses;
+using AnimalsAppBackend.ApplicationServices.Dtos;
+using AnimalsAppBackend.ApplicationServices.Responses;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace AnimalsAppBackend.ApplicationSerices
+namespace AnimalsAppBackend.ApplicationServices
 {
     public interface IUsersManagementService
     {
