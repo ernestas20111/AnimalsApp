@@ -41,9 +41,9 @@ namespace AnimalsAppBackend.DataAccess
             _animalsAppDbContext.Set<TEntity>().RemoveRange(entities);
         }
 
-        public virtual void Add(TEntity entity)
+        public virtual TEntity Add(TEntity entity)
         {
-            _animalsAppDbContext.Set<TEntity>().Add(entity);
+            return _animalsAppDbContext.Set<TEntity>().Add(entity).Entity;
         }
 
         public virtual void AddRange(IEnumerable<TEntity> entities)

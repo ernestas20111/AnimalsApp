@@ -3,19 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31205.134
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnimalsAppBackend", "AnimalsAppBackend\AnimalsAppBackend.csproj", "{2138514B-4733-472D-8187-E4250177CBCF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AnimalsAppBackend", "AnimalsAppBackend\AnimalsAppBackend.csproj", "{2138514B-4733-472D-8187-E4250177CBCF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnimalsAppBackend.Infrastructure", "AnimalsAppBackend.Infrastructure\AnimalsAppBackend.Infrastructure.csproj", "{1D4B2577-E6C6-40CE-A86C-8B4B54961F36}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AnimalsAppBackend.Infrastructure", "AnimalsAppBackend.Infrastructure\AnimalsAppBackend.Infrastructure.csproj", "{1D4B2577-E6C6-40CE-A86C-8B4B54961F36}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnimalsAppBackend.Domain", "AnimalsAppBackend.Domain\AnimalsAppBackend.Domain.csproj", "{885B6705-ABE6-44BA-B5FB-6192697265F2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AnimalsAppBackend.Domain", "AnimalsAppBackend.Domain\AnimalsAppBackend.Domain.csproj", "{885B6705-ABE6-44BA-B5FB-6192697265F2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnimalsAppBackend.DataAccess", "AnimalsAppBackend.DataAccess\AnimalsAppBackend.DataAccess.csproj", "{AFD1294D-01E3-4546-9409-954F45C9C361}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AnimalsAppBackend.DataAccess", "AnimalsAppBackend.DataAccess\AnimalsAppBackend.DataAccess.csproj", "{AFD1294D-01E3-4546-9409-954F45C9C361}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnimalsAppBackend.ApplicationSerices", "AnimalsAppBackend.ApplicationSerices\AnimalsAppBackend.ApplicationSerices.csproj", "{0DA35FFA-4B47-4E03-B2D9-CA40645CD4EB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AnimalsAppBackend.ApplicationSerices", "AnimalsAppBackend.ApplicationSerices\AnimalsAppBackend.ApplicationSerices.csproj", "{0DA35FFA-4B47-4E03-B2D9-CA40645CD4EB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnimalsAppBackend.ApplicationUtilities", "AnimalsAppBackend.ApplicationUtilities\AnimalsAppBackend.ApplicationUtilities.csproj", "{A3BBDE13-D5BD-458F-BC3F-7CCFD093C321}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AnimalsAppBackend.ApplicationUtilities", "AnimalsAppBackend.ApplicationUtilities\AnimalsAppBackend.ApplicationUtilities.csproj", "{A3BBDE13-D5BD-458F-BC3F-7CCFD093C321}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnimalsAppBackend.Abstractions", "AnimalsAppBackend.Abstractions\AnimalsAppBackend.Abstractions.csproj", "{D3C33F45-8B45-4462-9E1C-9F1AB49254FC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AnimalsAppBackend.Abstractions", "AnimalsAppBackend.Abstractions\AnimalsAppBackend.Abstractions.csproj", "{D3C33F45-8B45-4462-9E1C-9F1AB49254FC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnimalsAppBackend.Tests", "AnimalsAppBackend.Tests\AnimalsAppBackend.Tests.csproj", "{A26511CB-3479-4CA5-92ED-3CFEE32777F1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{D3C33F45-8B45-4462-9E1C-9F1AB49254FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D3C33F45-8B45-4462-9E1C-9F1AB49254FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D3C33F45-8B45-4462-9E1C-9F1AB49254FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A26511CB-3479-4CA5-92ED-3CFEE32777F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A26511CB-3479-4CA5-92ED-3CFEE32777F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A26511CB-3479-4CA5-92ED-3CFEE32777F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A26511CB-3479-4CA5-92ED-3CFEE32777F1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -11,7 +11,7 @@ namespace AnimalsAppBackend.DataAccess
         Task<TEntity> GetById(Guid id);
         IQueryable<TEntity> GetAll();
         IQueryable<TEntity> Find(Expression<Func<TEntity, bool>> expression);
-        void Add(TEntity entity);
+        TEntity Add(TEntity entity);
         void AddRange(IEnumerable<TEntity> entities);
         void Update(TEntity entity);
         void UpdateRange(IEnumerable<TEntity> entities);

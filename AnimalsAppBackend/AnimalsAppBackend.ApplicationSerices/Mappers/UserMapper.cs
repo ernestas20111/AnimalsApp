@@ -1,4 +1,6 @@
-﻿using AnimalsAppBackend.ApplicationSerices.Responses;
+﻿using AnimalsAppBackend.ApplicationSerices.Dtos;
+using AnimalsAppBackend.ApplicationSerices.Requests;
+using AnimalsAppBackend.ApplicationSerices.Responses;
 using AnimalsAppBackend.Domain;
 using System;
 using System.Collections.Generic;
@@ -10,9 +12,9 @@ namespace AnimalsAppBackend.ApplicationSerices.Mappers
 {
     public static class UserMapper
     {
-        public static GetUserResponse MapGetUserResponseFromUser(User user)
+        public static UserDto MapUserDtoFromUser(User user)
         {
-            return new GetUserResponse
+            return new UserDto
             {
                 Id = user.Id,
                 Name = user.Name,
@@ -21,6 +23,28 @@ namespace AnimalsAppBackend.ApplicationSerices.Mappers
                 PasswordHash = user.PasswordHash,
                 PasswordSalt = user.PasswordSalt
             };
+        }
+
+        public static User MapUserFromUserDto(UserDto userDto)
+        {
+            return new User
+            {
+                Id = userDto.Id,
+                Name = userDto.Name,
+                Surname = userDto.Surname,
+                Email = userDto.Email,
+                PasswordHash = userDto.PasswordHash,
+                PasswordSalt = userDto.PasswordSalt
+            };
+        }
+
+        public static void MapUserFromUserDto(User user, UserDto userDto)
+        {
+            user.Name = userDto.Name;
+            user.Surname = userDto.Surname;
+            user.Email = userDto.Email;
+            user.PasswordHash = userDto.PasswordHash;
+            user.PasswordSalt = userDto.PasswordSalt;
         }
     }
 }
