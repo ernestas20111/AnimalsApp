@@ -4,6 +4,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 using Moq;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using Xunit;
 
@@ -39,22 +41,5 @@ namespace AnimalsAppBackend.Tests.DataAccess
             _animalsAppDbContext.Verify(x => x.Set<User>());
             _userSetMock.Verify(x => x.FindAsync(It.IsAny<Guid>()));
         }
-
-        /*[Fact]
-        public void AddUser_UserIsAdded()
-        {
-            // Arrange
-            User user = new User();
-
-            _animalsAppDbContext.Setup(s => s.Set<User>()).Returns(_userSetMock.Object);
-            _userSetMock.Setup(s => s.Add(It.IsAny<User>()).Entity).Returns(user);
-
-            // Act
-            _genericRepository.Add(user);
-
-            //Assert
-            _animalsAppDbContext.Verify(x => x.Set<User>());
-            _userSetMock.Verify(x => x.Add(It.Is<User>(y => y == user)));
-        }*/
     }
 }
