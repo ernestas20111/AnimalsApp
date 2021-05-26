@@ -1,0 +1,403 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\ernes\\Documents\\GitHub\\AnimalsApp\\AnimalsAppBackend\\AnimalsAppBackend.Infrastructure\\AnimalsAppBackend.Infrastructure.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\ernes\\Documents\\GitHub\\AnimalsApp\\AnimalsAppBackend\\AnimalsAppBackend.Abstractions\\AnimalsAppBackend.Abstractions.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\ernes\\Documents\\GitHub\\AnimalsApp\\AnimalsAppBackend\\AnimalsAppBackend.Abstractions\\AnimalsAppBackend.Abstractions.csproj",
+        "projectName": "AnimalsAppBackend.Abstractions",
+        "projectPath": "C:\\Users\\ernes\\Documents\\GitHub\\AnimalsApp\\AnimalsAppBackend\\AnimalsAppBackend.Abstractions\\AnimalsAppBackend.Abstractions.csproj",
+        "packagesPath": "C:\\Users\\ernes\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ernes\\Documents\\GitHub\\AnimalsApp\\AnimalsAppBackend\\AnimalsAppBackend.Abstractions\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\ernes\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Mvc.Core": {
+              "target": "Package",
+              "version": "[2.2.5, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\ernes\\Documents\\GitHub\\AnimalsApp\\AnimalsAppBackend\\AnimalsAppBackend.ApplicationServices\\AnimalsAppBackend.ApplicationServices.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\ernes\\Documents\\GitHub\\AnimalsApp\\AnimalsAppBackend\\AnimalsAppBackend.ApplicationServices\\AnimalsAppBackend.ApplicationServices.csproj",
+        "projectName": "AnimalsAppBackend.ApplicationServices",
+        "projectPath": "C:\\Users\\ernes\\Documents\\GitHub\\AnimalsApp\\AnimalsAppBackend\\AnimalsAppBackend.ApplicationServices\\AnimalsAppBackend.ApplicationServices.csproj",
+        "packagesPath": "C:\\Users\\ernes\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ernes\\Documents\\GitHub\\AnimalsApp\\AnimalsAppBackend\\AnimalsAppBackend.ApplicationServices\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\ernes\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\ernes\\Documents\\GitHub\\AnimalsApp\\AnimalsAppBackend\\AnimalsAppBackend.Abstractions\\AnimalsAppBackend.Abstractions.csproj": {
+                "projectPath": "C:\\Users\\ernes\\Documents\\GitHub\\AnimalsApp\\AnimalsAppBackend\\AnimalsAppBackend.Abstractions\\AnimalsAppBackend.Abstractions.csproj"
+              },
+              "C:\\Users\\ernes\\Documents\\GitHub\\AnimalsApp\\AnimalsAppBackend\\AnimalsAppBackend.DataAccess\\AnimalsAppBackend.DataAccess.csproj": {
+                "projectPath": "C:\\Users\\ernes\\Documents\\GitHub\\AnimalsApp\\AnimalsAppBackend\\AnimalsAppBackend.DataAccess\\AnimalsAppBackend.DataAccess.csproj"
+              },
+              "C:\\Users\\ernes\\Documents\\GitHub\\AnimalsApp\\AnimalsAppBackend\\AnimalsAppBackend.Domain\\AnimalsAppBackend.Domain.csproj": {
+                "projectPath": "C:\\Users\\ernes\\Documents\\GitHub\\AnimalsApp\\AnimalsAppBackend\\AnimalsAppBackend.Domain\\AnimalsAppBackend.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\ernes\\Documents\\GitHub\\AnimalsApp\\AnimalsAppBackend\\AnimalsAppBackend.DataAccess\\AnimalsAppBackend.DataAccess.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\ernes\\Documents\\GitHub\\AnimalsApp\\AnimalsAppBackend\\AnimalsAppBackend.DataAccess\\AnimalsAppBackend.DataAccess.csproj",
+        "projectName": "AnimalsAppBackend.DataAccess",
+        "projectPath": "C:\\Users\\ernes\\Documents\\GitHub\\AnimalsApp\\AnimalsAppBackend\\AnimalsAppBackend.DataAccess\\AnimalsAppBackend.DataAccess.csproj",
+        "packagesPath": "C:\\Users\\ernes\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ernes\\Documents\\GitHub\\AnimalsApp\\AnimalsAppBackend\\AnimalsAppBackend.DataAccess\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\ernes\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\ernes\\Documents\\GitHub\\AnimalsApp\\AnimalsAppBackend\\AnimalsAppBackend.Domain\\AnimalsAppBackend.Domain.csproj": {
+                "projectPath": "C:\\Users\\ernes\\Documents\\GitHub\\AnimalsApp\\AnimalsAppBackend\\AnimalsAppBackend.Domain\\AnimalsAppBackend.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.Abstractions": {
+              "target": "Package",
+              "version": "[5.0.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.Relational": {
+              "target": "Package",
+              "version": "[5.0.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.6, )"
+            },
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\ernes\\Documents\\GitHub\\AnimalsApp\\AnimalsAppBackend\\AnimalsAppBackend.Domain\\AnimalsAppBackend.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\ernes\\Documents\\GitHub\\AnimalsApp\\AnimalsAppBackend\\AnimalsAppBackend.Domain\\AnimalsAppBackend.Domain.csproj",
+        "projectName": "AnimalsAppBackend.Domain",
+        "projectPath": "C:\\Users\\ernes\\Documents\\GitHub\\AnimalsApp\\AnimalsAppBackend\\AnimalsAppBackend.Domain\\AnimalsAppBackend.Domain.csproj",
+        "packagesPath": "C:\\Users\\ernes\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ernes\\Documents\\GitHub\\AnimalsApp\\AnimalsAppBackend\\AnimalsAppBackend.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\ernes\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\ernes\\Documents\\GitHub\\AnimalsApp\\AnimalsAppBackend\\AnimalsAppBackend.Infrastructure\\AnimalsAppBackend.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\ernes\\Documents\\GitHub\\AnimalsApp\\AnimalsAppBackend\\AnimalsAppBackend.Infrastructure\\AnimalsAppBackend.Infrastructure.csproj",
+        "projectName": "AnimalsAppBackend.Infrastructure",
+        "projectPath": "C:\\Users\\ernes\\Documents\\GitHub\\AnimalsApp\\AnimalsAppBackend\\AnimalsAppBackend.Infrastructure\\AnimalsAppBackend.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\ernes\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ernes\\Documents\\GitHub\\AnimalsApp\\AnimalsAppBackend\\AnimalsAppBackend.Infrastructure\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\ernes\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\ernes\\Documents\\GitHub\\AnimalsApp\\AnimalsAppBackend\\AnimalsAppBackend.ApplicationServices\\AnimalsAppBackend.ApplicationServices.csproj": {
+                "projectPath": "C:\\Users\\ernes\\Documents\\GitHub\\AnimalsApp\\AnimalsAppBackend\\AnimalsAppBackend.ApplicationServices\\AnimalsAppBackend.ApplicationServices.csproj"
+              },
+              "C:\\Users\\ernes\\Documents\\GitHub\\AnimalsApp\\AnimalsAppBackend\\AnimalsAppBackend.DataAccess\\AnimalsAppBackend.DataAccess.csproj": {
+                "projectPath": "C:\\Users\\ernes\\Documents\\GitHub\\AnimalsApp\\AnimalsAppBackend\\AnimalsAppBackend.DataAccess\\AnimalsAppBackend.DataAccess.csproj"
+              },
+              "C:\\Users\\ernes\\Documents\\GitHub\\AnimalsApp\\AnimalsAppBackend\\AnimalsAppBackend.Domain\\AnimalsAppBackend.Domain.csproj": {
+                "projectPath": "C:\\Users\\ernes\\Documents\\GitHub\\AnimalsApp\\AnimalsAppBackend\\AnimalsAppBackend.Domain\\AnimalsAppBackend.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Mvc.Core": {
+              "target": "Package",
+              "version": "[2.2.5, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.Abstractions": {
+              "target": "Package",
+              "version": "[5.0.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.Relational": {
+              "target": "Package",
+              "version": "[5.0.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.6, )"
+            },
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
