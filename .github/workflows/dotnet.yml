@@ -18,11 +18,11 @@ jobs:
       with:
         dotnet-version: 5.0.x
     - name: Restore dependencies
-      working-directory: AnimalsAppBackend
+      working-directory: animals-app-backend
       run: dotnet restore
     - name: Build
-      working-directory: AnimalsAppBackend
+      working-directory: animals-app-backend
       run: dotnet build --no-restore
     - name: Test
-      working-directory: AnimalsAppBackend
+      working-directory: animals-app-backend
       run: dotnet test --no-build --verbosity normal
