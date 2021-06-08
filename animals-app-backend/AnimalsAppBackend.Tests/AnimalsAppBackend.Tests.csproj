@@ -21,6 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\AnimalsAppBackend.Abstractions\AnimalsAppBackend.Abstractions.csproj" />
     <ProjectReference Include="..\AnimalsAppBackend.DataAccess\AnimalsAppBackend.DataAccess.csproj" />
   </ItemGroup>
 

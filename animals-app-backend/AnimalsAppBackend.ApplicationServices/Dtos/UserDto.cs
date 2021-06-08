@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using AnimalsAppBackend.Abstractions;
+using System;
 
 namespace AnimalsAppBackend.ApplicationServices.Dtos
 {
@@ -14,6 +11,7 @@ namespace AnimalsAppBackend.ApplicationServices.Dtos
 
         public string Surname { get; set; }
 
+        [EmailValidation]
         public string Email { get; set; }
 
         public string PasswordHash { get; set; }
