@@ -73,7 +73,7 @@
     "lz-string" "^1.4.4"
     "pretty-format" "^26.6.2"
 
-"@testing-library/jest-dom@^5.11.4":
+"@testing-library/jest-dom@^5.13.0":
   "integrity" "sha512-+jXXTn8GjRnZkJfzG/tqK/2Q7dGlBInR412WE7Aml7CT3wdSpx5dMQC0HOwVQoZ3cNTmQUy8fCVGUV/Zhoyvcw=="
   "resolved" "https://registry.npmjs.org/@testing-library/jest-dom/-/jest-dom-5.13.0.tgz"
   "version" "5.13.0"
@@ -87,7 +87,7 @@
     "lodash" "^4.17.15"
     "redent" "^3.0.0"
 
-"@testing-library/react@^11.1.0":
+"@testing-library/react@^11.2.7":
   "integrity" "sha512-tzRNp7pzd5QmbtXNG/mhdcl7Awfu/Iz1RaVHY75zTdOkmHCuzMhRL83gWHSgOAcjS3CCbyfwUHMZgRJb4kAfpA=="
   "resolved" "https://registry.npmjs.org/@testing-library/react/-/react-11.2.7.tgz"
   "version" "11.2.7"
