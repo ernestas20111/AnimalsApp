@@ -1,3 +1,4 @@
+import React from "react";
 import logo from "../src/assets/svg/logo.svg";
 import "../src/styles/layout/App.css";
 
