@@ -5,7 +5,6 @@ import store from "./redux/store.jsx";
 import { Provider } from "react-redux";
 
 //useful link https://dev.to/siyile/quick-template-to-test-redux-tool-kit-and-react-router-with-jest-34ll
-//https://redux.js.org/recipes/writing-tests
 
 test("renders learn react link", () => {
   render(
@@ -14,5 +13,5 @@ test("renders learn react link", () => {
     </Provider>
   );
   const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  expect(linkElement).toContainElement(document.getElementsByClassName("App-link")[0]);
 });
