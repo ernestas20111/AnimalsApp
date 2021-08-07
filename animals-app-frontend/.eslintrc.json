@@ -1,0 +1,51 @@
+{
+    "extends": [
+		"react-app",
+		"eslint:recommended",
+		"plugin:react/recommended"
+	],
+    "rules": {
+		"no-console": "warn",
+        "indent": [
+            "error",
+            2
+        ],
+        "linebreak-style": [
+            "error",
+            "windows"
+        ],
+        "quotes": [
+            "error",
+            "single"
+        ],
+        "semi": [
+            "error",
+            "always"
+        ],
+        "prefer-const": [
+            "error"
+        ],
+        "no-const-assign": [
+            "error"
+        ],
+        "no-var": [
+            "error"
+        ],
+        "object-shorthand": [
+            "error", 
+            "always"
+		],
+		"no-new-object": [
+			"error"
+		],
+		"no-unused-vars": [
+			"warn"
+		],
+		"no-array-constructor": "error",
+		"prefer-destructuring": "warn",
+		"template-curly-spacing": ["error", "never"],
+		"prefer-template": "error",
+		"no-eval": "error",
+		"no-useless-escape": "error"
+    }
+}
