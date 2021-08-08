@@ -1,14 +1,12 @@
 {
-	"plugins": [
-		"react"
-	],
+	"plugins": ["import"],
 	"extends": [
 		"react-app",
 		"eslint:recommended",
 		"plugin:react/recommended"
 	],
 	"parserOptions": {
-		"ecmaVersion": 7,
+		"ecmaVersion": 2020,
 		"sourceType": "module",
 		"ecmaFeatures": {
 			"jsx": true
@@ -16,14 +14,14 @@
 	},
 	"env": {
 		"browser": true,
-		"node": true,
+		"jest": true,
 		"es6": true
 	},
 	"settings": {
 		"import/resolver": {
 			"node": {},
 			"babel-module": {
-			"root": ["./src"]
+				"root": ["./src"]
 			}
 		}
 	},
@@ -43,13 +41,14 @@
 				"checkChildContextTypes": true
 			}
 		],
-		"no-console": "warn",
+		// "react/jsx-filename-extension": ["error", { "allow": "as-needed" }],
 		"react/no-multi-comp": [ 
 			"error", 
 			{ 
 				"ignoreStateless": true 
 			}
 		],
+		"no-console": "warn",
         "indent": [
             "error",
             2
