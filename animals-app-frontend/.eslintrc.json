@@ -17,14 +17,6 @@
 		"jest": true,
 		"es6": true
 	},
-	"settings": {
-		"import/resolver": {
-			"node": {},
-			"babel-module": {
-				"root": ["./src"]
-			}
-		}
-	},
 	"root": true,
     "rules": {
 		"react/jsx-pascal-case": [
