@@ -1,11 +1,55 @@
 {
-    "extends": [
+	"plugins": [
+		"react"
+	],
+	"extends": [
 		"react-app",
 		"eslint:recommended",
 		"plugin:react/recommended"
 	],
+	"parserOptions": {
+		"ecmaVersion": 7,
+		"sourceType": "module",
+		"ecmaFeatures": {
+			"jsx": true
+		}
+	},
+	"env": {
+		"browser": true,
+		"node": true,
+		"es6": true
+	},
+	"settings": {
+		"import/resolver": {
+			"node": {},
+			"babel-module": {
+			"root": ["./src"]
+			}
+		}
+	},
+	"root": true,
     "rules": {
+		"react/jsx-pascal-case": [
+			"error", 
+			{ 
+				"allowAllCaps": true
+			}
+		],
+		"react/forbid-prop-types": [
+			"warn", 
+			{ 
+				"forbid": ["any", "array", "object"], 
+				"checkContextTypes": true, 
+				"checkChildContextTypes": true
+			}
+		],
 		"no-console": "warn",
+		"react/no-multi-comp": [ 
+			"error", 
+			{ 
+				"ignoreStateless": true 
+			}
+		],
         "indent": [
             "error",
             2
