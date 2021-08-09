@@ -11,6 +11,8 @@ namespace AnimalsAppBackend.DataAccess
     {
         IGenericRepository<User> Users { get; }
 
+        IGenericRepository<UserDetails> UserDetails { get; }
+
         Task SaveChangesAsync();
     }
 }

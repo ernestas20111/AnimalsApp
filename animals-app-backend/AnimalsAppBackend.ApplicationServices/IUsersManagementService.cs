@@ -1,6 +1,5 @@
 ﻿using AnimalsAppBackend.Abstractions;
 using AnimalsAppBackend.ApplicationServices.Dtos;
-using AnimalsAppBackend.ApplicationServices.Responses;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;

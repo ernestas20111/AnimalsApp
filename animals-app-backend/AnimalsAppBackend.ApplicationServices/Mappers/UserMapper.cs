@@ -1,12 +1,5 @@
 ﻿using AnimalsAppBackend.ApplicationServices.Dtos;
-using AnimalsAppBackend.ApplicationServices.Requests;
-using AnimalsAppBackend.ApplicationServices.Responses;
 using AnimalsAppBackend.Domain;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AnimalsAppBackend.ApplicationServices.Mappers
 {

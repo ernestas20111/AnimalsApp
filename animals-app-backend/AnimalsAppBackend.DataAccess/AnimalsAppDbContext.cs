@@ -18,6 +18,8 @@ namespace AnimalsAppBackend.DataAccess
 
         public virtual DbSet<User> Users { get; set; }
 
+        public virtual DbSet<UserDetails> UserDetails { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             //User
