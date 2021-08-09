@@ -14,6 +14,7 @@ namespace AnimalsAppBackend.ApplicationServices.Dtos
         [EmailValidation]
         public string Email { get; set; }
 
+        [PhoneValidation]
         public string Phone { get; set; }
     }
 }
