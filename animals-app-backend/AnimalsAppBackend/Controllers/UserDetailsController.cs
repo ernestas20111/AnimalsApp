@@ -55,7 +55,6 @@ namespace AnimalsAppBackend.Controllers
             return BadRequest(result);
         }
 
-
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(Guid id)
         {

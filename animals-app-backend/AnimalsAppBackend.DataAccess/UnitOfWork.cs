@@ -17,6 +17,8 @@ namespace AnimalsAppBackend.DataAccess
 
         private GenericRepository<Post> _post;
 
+        private GenericRepository<PostImage> _postImage;
+
         public UnitOfWork(AnimalsAppDbContext animalsAppDbContext)
         {
             _animalsAppDbContext = animalsAppDbContext;
@@ -46,6 +48,15 @@ namespace AnimalsAppBackend.DataAccess
             {
                 return _post ??
                     (_post = new GenericRepository<Post>(_animalsAppDbContext));
+            }
+        }
+
+        public IGenericRepository<PostImage> PostImages
+        {
+            get
+            {
+                return _postImage ??
+                    (_postImage = new GenericRepository<PostImage>(_animalsAppDbContext));
             }
         }
 

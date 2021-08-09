@@ -22,6 +22,8 @@ namespace AnimalsAppBackend.DataAccess
 
         public virtual DbSet<Post> Posts { get; set; }
 
+        public virtual DbSet<PostImage> PostImages { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             //User

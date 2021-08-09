@@ -41,7 +41,6 @@ namespace AnimalsAppBackend.Controllers
             return BadRequest(result);
         }
 
-
         [HttpPost]
         public async Task<IActionResult> Add(UserDto userDto)
         {
@@ -66,7 +65,6 @@ namespace AnimalsAppBackend.Controllers
 
             return BadRequest(result);
         }
-
 
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(Guid id)
