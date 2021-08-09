@@ -15,6 +15,8 @@ namespace AnimalsAppBackend.DataAccess
 
         private GenericRepository<UserDetails> _userDetails;
 
+        private GenericRepository<Post> _post;
+
         public UnitOfWork(AnimalsAppDbContext animalsAppDbContext)
         {
             _animalsAppDbContext = animalsAppDbContext;
@@ -35,6 +37,15 @@ namespace AnimalsAppBackend.DataAccess
             {
                 return _userDetails ??
                     (_userDetails = new GenericRepository<UserDetails>(_animalsAppDbContext));
+            }
+        }
+
+        public IGenericRepository<Post> Posts
+        {
+            get
+            {
+                return _post ??
+                    (_post = new GenericRepository<Post>(_animalsAppDbContext));
             }
         }
 
