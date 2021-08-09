@@ -19,10 +19,10 @@ namespace AnimalsAppBackend.Controllers
             _userDetailsManagementService = userDetailsManagementService;
         }
 
-        [HttpGet("{id}")]
-        public async Task<IActionResult> Get(Guid id)// susieti su kita lentele
+        [HttpGet("{userId}")]
+        public async Task<IActionResult> Get(Guid userId)
         {
-            var result = await _userDetailsManagementService.GetUserDetails(id);
+            var result = await _userDetailsManagementService.GetUserDetails(userId);
             if (result.Valid)
             {
                 return Ok(result);
