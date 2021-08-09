@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AnimalsAppBackend.DataAccess.Migrations
 {
     [DbContext(typeof(AnimalsAppDbContext))]
-    [Migration("20210523174307_AddedUserTable")]
-    partial class AddedUserTable
+    [Migration("20210809132421_AddedUsersTable")]
+    partial class AddedUsersTable
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -37,12 +37,7 @@ namespace AnimalsAppBackend.DataAccess.Migrations
                         .HasMaxLength(255)
                         .HasColumnType("varchar(255)");
 
-                    b.Property<string>("PasswordHash")
-                        .IsRequired()
-                        .HasMaxLength(255)
-                        .HasColumnType("varchar(255)");
-
-                    b.Property<string>("PasswordSalt")
+                    b.Property<string>("Phone")
                         .IsRequired()
                         .HasMaxLength(255)
                         .HasColumnType("varchar(255)");

@@ -39,12 +39,7 @@ namespace AnimalsAppBackend.DataAccess
                 .HasMaxLength(255)
                 .IsRequired();
 
-            modelBuilder.Entity<User>().Property(x => x.PasswordHash)
-                .HasColumnType("varchar")
-                .HasMaxLength(255)
-                .IsRequired();
-
-            modelBuilder.Entity<User>().Property(x => x.PasswordSalt)
+            modelBuilder.Entity<User>().Property(x => x.Phone)
                 .HasColumnType("varchar")
                 .HasMaxLength(255)
                 .IsRequired();

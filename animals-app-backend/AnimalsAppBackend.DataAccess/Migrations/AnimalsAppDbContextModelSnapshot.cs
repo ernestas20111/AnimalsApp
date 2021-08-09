@@ -35,12 +35,7 @@ namespace AnimalsAppBackend.DataAccess.Migrations
                         .HasMaxLength(255)
                         .HasColumnType("varchar(255)");
 
-                    b.Property<string>("PasswordHash")
-                        .IsRequired()
-                        .HasMaxLength(255)
-                        .HasColumnType("varchar(255)");
-
-                    b.Property<string>("PasswordSalt")
+                    b.Property<string>("Phone")
                         .IsRequired()
                         .HasMaxLength(255)
                         .HasColumnType("varchar(255)");

@@ -20,8 +20,7 @@ namespace AnimalsAppBackend.ApplicationServices.Mappers
                 Name = user.Name,
                 Surname = user.Surname,
                 Email = user.Email,
-                PasswordHash = user.PasswordHash,
-                PasswordSalt = user.PasswordSalt
+                Phone = user.Phone
             };
         }
 
@@ -33,8 +32,7 @@ namespace AnimalsAppBackend.ApplicationServices.Mappers
                 Name = userDto.Name,
                 Surname = userDto.Surname,
                 Email = userDto.Email,
-                PasswordHash = userDto.PasswordHash,
-                PasswordSalt = userDto.PasswordSalt
+                Phone = userDto.Phone
             };
         }
 
@@ -43,8 +41,7 @@ namespace AnimalsAppBackend.ApplicationServices.Mappers
             user.Name = userDto.Name;
             user.Surname = userDto.Surname;
             user.Email = userDto.Email;
-            user.PasswordHash = userDto.PasswordHash;
-            user.PasswordSalt = userDto.PasswordSalt;
+            user.Phone = userDto.Phone;
         }
     }
 }

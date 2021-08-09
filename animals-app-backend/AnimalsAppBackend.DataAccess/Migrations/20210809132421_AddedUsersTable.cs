@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace AnimalsAppBackend.DataAccess.Migrations
 {
-    public partial class AddedUserTable : Migration
+    public partial class AddedUsersTable : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -15,8 +15,7 @@ namespace AnimalsAppBackend.DataAccess.Migrations
                     Name = table.Column<string>(type: "varchar(255)", maxLength: 255, nullable: false),
                     Surname = table.Column<string>(type: "varchar(255)", maxLength: 255, nullable: false),
                     Email = table.Column<string>(type: "varchar(255)", maxLength: 255, nullable: false),
-                    PasswordHash = table.Column<string>(type: "varchar(255)", maxLength: 255, nullable: false),
-                    PasswordSalt = table.Column<string>(type: "varchar(255)", maxLength: 255, nullable: false)
+                    Phone = table.Column<string>(type: "varchar(255)", maxLength: 255, nullable: false)
                 },
                 constraints: table =>
                 {
