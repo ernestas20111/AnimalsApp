@@ -10,30 +10,19 @@ namespace AnimalsAppBackend.Controllers
     [ApiController]
     [ValidateModel]
     [Route("[controller]")]
-    public class UsersController : ControllerBase
+    public class UserDetailsController : ControllerBase
     {
-        private readonly IUsersManagementService _usersManagementService;
+        private readonly IUserDetailsManagementService _userDetailsManagementService;
 
-        public UsersController(IUsersManagementService usersManagementService)
+        public UserDetailsController(IUserDetailsManagementService userDetailsManagementService)
         {
-            _usersManagementService = usersManagementService;
+            _userDetailsManagementService = userDetailsManagementService;
         }
 
-        [HttpGet("{id}")]
-        public async Task<IActionResult> Get(Guid id)
+        [HttpGet("{userId}")]
+        public async Task<IActionResult> Get(Guid userId)
         {
-            var result = await _usersManagementService.GetUser(id);
-            if (result.Valid)
-            {
-                return Ok(result);
-            }
-            return BadRequest(result);
-        }
-
-        [HttpGet]
-        public async Task<IActionResult> GetAll()
-        {
-            var result = await _usersManagementService.GetAllUsers();
+            var result = await _userDetailsManagementService.GetUserDetails(userId);
             if (result.Valid)
             {
                 return Ok(result);
@@ -42,9 +31,9 @@ namespace AnimalsAppBackend.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Add(UserDto userDto)
+        public async Task<IActionResult> Add(UserDetailsDto userDetailsDto)
         {
-            var result = await _usersManagementService.AddUser(userDto);
+            var result = await _userDetailsManagementService.AddUserDetails(userDetailsDto);
             if (result.Valid)
             {
                 return Ok(result);
@@ -54,10 +43,10 @@ namespace AnimalsAppBackend.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Update(Guid id, [FromBody] UserDto userDto)
+        public async Task<IActionResult> Update(Guid id, [FromBody] UserDetailsDto userDetailsDto)
         {
-            userDto.Id = id;
-            var result = await _usersManagementService.UpdateUser(userDto);
+            userDetailsDto.Id = id;
+            var result = await _userDetailsManagementService.UpdateUserDetails(userDetailsDto);
             if (result.Valid)
             {
                 return Ok(result);
@@ -69,7 +58,7 @@ namespace AnimalsAppBackend.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(Guid id)
         {
-            var result = await _usersManagementService.RemoveUser(id);
+            var result = await _userDetailsManagementService.RemoveUserDetails(id);
             if (result.Valid)
             {
                 return Ok(result);

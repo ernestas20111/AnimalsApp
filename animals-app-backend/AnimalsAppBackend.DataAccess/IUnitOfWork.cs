@@ -11,6 +11,12 @@ namespace AnimalsAppBackend.DataAccess
     {
         IGenericRepository<User> Users { get; }
 
+        IGenericRepository<UserDetails> UserDetails { get; }
+
+        IGenericRepository<Post> Posts { get; }
+
+        IGenericRepository<PostImage> PostImages { get; }
+
         Task SaveChangesAsync();
     }
 }

@@ -10,19 +10,19 @@ namespace AnimalsAppBackend.Controllers
     [ApiController]
     [ValidateModel]
     [Route("[controller]")]
-    public class UsersController : ControllerBase
+    public class PostImagesController : ControllerBase
     {
-        private readonly IUsersManagementService _usersManagementService;
+        private readonly IPostImagesManagementService _postImagesManagementService;
 
-        public UsersController(IUsersManagementService usersManagementService)
+        public PostImagesController(IPostImagesManagementService postImagesManagementService)
         {
-            _usersManagementService = usersManagementService;
+            _postImagesManagementService = postImagesManagementService;
         }
 
-        [HttpGet("{id}")]
-        public async Task<IActionResult> Get(Guid id)
+        [HttpGet("{postId}")]
+        public async Task<IActionResult> Get(Guid postId)
         {
-            var result = await _usersManagementService.GetUser(id);
+            var result = await _postImagesManagementService.GetPostImagesByPostId(postId);
             if (result.Valid)
             {
                 return Ok(result);
@@ -33,7 +33,7 @@ namespace AnimalsAppBackend.Controllers
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
-            var result = await _usersManagementService.GetAllUsers();
+            var result = await _postImagesManagementService.GetAllPostImages();
             if (result.Valid)
             {
                 return Ok(result);
@@ -42,9 +42,9 @@ namespace AnimalsAppBackend.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Add(UserDto userDto)
+        public async Task<IActionResult> Add(PostImageDto postImageDto)
         {
-            var result = await _usersManagementService.AddUser(userDto);
+            var result = await _postImagesManagementService.AddPostImage(postImageDto);
             if (result.Valid)
             {
                 return Ok(result);
@@ -54,10 +54,10 @@ namespace AnimalsAppBackend.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Update(Guid id, [FromBody] UserDto userDto)
+        public async Task<IActionResult> Update(Guid id, [FromBody] PostImageDto postImageDto)
         {
-            userDto.Id = id;
-            var result = await _usersManagementService.UpdateUser(userDto);
+            postImageDto.Id = id;
+            var result = await _postImagesManagementService.UpdatePostImage(postImageDto);
             if (result.Valid)
             {
                 return Ok(result);
@@ -69,7 +69,7 @@ namespace AnimalsAppBackend.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(Guid id)
         {
-            var result = await _usersManagementService.RemoveUser(id);
+            var result = await _postImagesManagementService.RemovePostImage(id);
             if (result.Valid)
             {
                 return Ok(result);

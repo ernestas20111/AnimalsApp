@@ -4,14 +4,16 @@ using AnimalsAppBackend.DataAccess;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace AnimalsAppBackend.DataAccess.Migrations
 {
     [DbContext(typeof(AnimalsAppDbContext))]
-    partial class AnimalsAppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20210809202015_AddedPostImagesTable")]
+    partial class AddedPostImagesTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -26,14 +28,10 @@ namespace AnimalsAppBackend.DataAccess.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Category")
-                        .IsRequired()
-                        .HasMaxLength(255)
-                        .HasColumnType("varchar(255)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Description")
-                        .IsRequired()
-                        .HasMaxLength(255)
-                        .HasColumnType("varchar(255)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("Duration")
                         .HasColumnType("datetime2");
@@ -42,21 +40,15 @@ namespace AnimalsAppBackend.DataAccess.Migrations
                         .HasColumnType("float");
 
                     b.Property<string>("Purpose")
-                        .IsRequired()
-                        .HasMaxLength(255)
-                        .HasColumnType("varchar(255)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Title")
-                        .IsRequired()
-                        .HasMaxLength(255)
-                        .HasColumnType("varchar(255)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<Guid>("UserId")
                         .HasColumnType("uniqueidentifier");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("UserId");
 
                     b.ToTable("Posts");
                 });
@@ -68,15 +60,12 @@ namespace AnimalsAppBackend.DataAccess.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("ImageUrl")
-                        .IsRequired()
-                        .HasColumnType("varchar");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<Guid>("PostId")
                         .HasColumnType("uniqueidentifier");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("PostId");
 
                     b.ToTable("PostImages");
                 });
@@ -119,19 +108,13 @@ namespace AnimalsAppBackend.DataAccess.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("PasswordHash")
-                        .IsRequired()
-                        .HasMaxLength(255)
-                        .HasColumnType("varchar(255)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("PasswordSalt")
-                        .IsRequired()
-                        .HasMaxLength(255)
-                        .HasColumnType("varchar(255)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Role")
-                        .IsRequired()
-                        .HasMaxLength(255)
-                        .HasColumnType("varchar(255)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<Guid>("UserId")
                         .HasColumnType("uniqueidentifier");
@@ -141,55 +124,7 @@ namespace AnimalsAppBackend.DataAccess.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("UserId")
-                        .IsUnique();
-
                     b.ToTable("UserDetails");
-                });
-
-            modelBuilder.Entity("AnimalsAppBackend.Domain.Post", b =>
-                {
-                    b.HasOne("AnimalsAppBackend.Domain.User", "User")
-                        .WithMany("Posts")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("User");
-                });
-
-            modelBuilder.Entity("AnimalsAppBackend.Domain.PostImage", b =>
-                {
-                    b.HasOne("AnimalsAppBackend.Domain.Post", "Post")
-                        .WithMany("PostImages")
-                        .HasForeignKey("PostId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Post");
-                });
-
-            modelBuilder.Entity("AnimalsAppBackend.Domain.UserDetails", b =>
-                {
-                    b.HasOne("AnimalsAppBackend.Domain.User", "User")
-                        .WithOne("UserDetails")
-                        .HasForeignKey("AnimalsAppBackend.Domain.UserDetails", "UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("User");
-                });
-
-            modelBuilder.Entity("AnimalsAppBackend.Domain.Post", b =>
-                {
-                    b.Navigation("PostImages");
-                });
-
-            modelBuilder.Entity("AnimalsAppBackend.Domain.User", b =>
-                {
-                    b.Navigation("Posts");
-
-                    b.Navigation("UserDetails");
                 });
 #pragma warning restore 612, 618
         }
