@@ -28,7 +28,9 @@ namespace AnimalsAppBackend.ApplicationServices
                 return Result<List<PostImageDto>>.CreateErrorResult($"No post images were found.");
             }
 
-            return Result<List<PostImageDto>>.Create(postImages.Select(postImage => PostImageMapper.MapPostImageDtoFromPostImage(postImage)).ToList());
+            var postImagesDto = postImages.Select(postImage => PostImageMapper.MapPostImageDtoFromPostImage(postImage)).ToList();
+
+            return Result<List<PostImageDto>>.Create(postImagesDto);
         }
 
         public async Task<Result<List<PostImageDto>>> GetPostImagesByPostId(Guid id)
@@ -39,7 +41,9 @@ namespace AnimalsAppBackend.ApplicationServices
                 return Result<List<PostImageDto>>.CreateErrorResult($"Post images with id {id} was not found.");
             }
 
-            return Result<List<PostImageDto>>.Create(postImages.Select(postImage => PostImageMapper.MapPostImageDtoFromPostImage(postImage)).ToList());
+            var postImagesDto = postImages.Select(postImage => PostImageMapper.MapPostImageDtoFromPostImage(postImage)).ToList();
+
+            return Result<List<PostImageDto>>.Create(postImagesDto);
         }
 
         public async Task<Result<string>> RemovePostImage(Guid id)
