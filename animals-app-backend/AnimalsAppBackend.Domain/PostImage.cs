@@ -1,5 +1,4 @@
 ﻿using System;
-using System.ComponentModel.DataAnnotations.Schema;
 
 namespace AnimalsAppBackend.Domain
 {
@@ -8,6 +7,8 @@ namespace AnimalsAppBackend.Domain
         public Guid Id { get; set; }
 
         public Guid PostId { get; set; }
+
+        public Post Post { get; set; }
 
         public string ImageUrl { get; set; }
     }

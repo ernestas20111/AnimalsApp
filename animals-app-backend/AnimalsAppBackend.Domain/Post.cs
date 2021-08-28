@@ -1,5 +1,5 @@
 ﻿using System;
-using System.ComponentModel.DataAnnotations.Schema;
+using System.Collections.Generic;
 
 namespace AnimalsAppBackend.Domain
 {
@@ -8,6 +8,10 @@ namespace AnimalsAppBackend.Domain
         public Guid Id { get; set; }
 
         public Guid UserId { get; set; }
+
+        public User User { get; set; }
+
+        public List<PostImage> PostImages { get; set; }
 
         public string Title { get; set; }
 
