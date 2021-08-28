@@ -28,7 +28,9 @@ namespace AnimalsAppBackend.ApplicationServices
                 return Result<List<PostDto>>.CreateErrorResult($"No posts were found.");
             }
 
-            return Result<List<PostDto>>.Create(posts.Select(post => PostMapper.MapPostDtoFromPost(post)).ToList());
+            var postsDto = posts.Select(post => PostMapper.MapPostDtoFromPost(post)).ToList();
+
+            return Result<List<PostDto>>.Create(postsDto);
         }
 
         public async Task<Result<List<PostDto>>> GetPostsByUserId(Guid id)
@@ -39,7 +41,9 @@ namespace AnimalsAppBackend.ApplicationServices
                 return Result<List<PostDto>>.CreateErrorResult($"Posts with id {id} was not found.");
             }
 
-            return Result<List<PostDto>>.Create(posts.Select(post => PostMapper.MapPostDtoFromPost(post)).ToList());
+            var postsDto = posts.Select(post => PostMapper.MapPostDtoFromPost(post)).ToList();
+
+            return Result<List<PostDto>>.Create(postsDto);
         }
 
         public async Task<Result<string>> RemovePost(Guid id)
