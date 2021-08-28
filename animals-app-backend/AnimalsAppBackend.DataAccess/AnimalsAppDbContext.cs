@@ -34,12 +34,14 @@ namespace AnimalsAppBackend.DataAccess
                 .HasOne(u => u.UserDetails)
                 .WithOne(ud => ud.User)
                 .HasForeignKey<UserDetails>(ud => ud.UserId)
+                .OnDelete(DeleteBehavior.Cascade)
                 .IsRequired();
 
             modelBuilder.Entity<User>()
                 .HasMany(u => u.Posts)
                 .WithOne(p => p.User)
                 .HasForeignKey(p => p.UserId)
+                .OnDelete(DeleteBehavior.Cascade)
                 .IsRequired();
 
             modelBuilder.Entity<User>().Property(x => x.Name)
@@ -93,6 +95,7 @@ namespace AnimalsAppBackend.DataAccess
                 .HasMany(p => p.PostImages)
                 .WithOne(pi => pi.Post)
                 .HasForeignKey(pi => pi.PostId)
+                .OnDelete(DeleteBehavior.Cascade)
                 .IsRequired();
 
             modelBuilder.Entity<Post>().Property(x => x.Title)
