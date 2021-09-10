@@ -1,44 +1,42 @@
 {
   "name": "animals-app-frontend",
-  "version": "0.1.0",
+  "version": "0.0.0",
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "watch": "ng build --watch --configuration development",
+    "test": "ng test --browsers=Opera",
+    "ci:test": "ng test --watch=false --browsers=ChromeHeadlessCustom --code-coverage",
+    "ci:build": "ng build --prod"
+  },
   "private": true,
   "dependencies": {
-    "@reduxjs/toolkit": "^1.6.0",
-    "@testing-library/jest-dom": "^5.13.0",
-    "@testing-library/react": "^11.2.7",
-    "@testing-library/user-event": "^12.1.10",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-redux": "^7.2.4",
-    "react-scripts": "^1.1.5",
-    "redux-immutable-state-invariant": "^2.1.0",
-    "web-vitals": "^1.0.1",
-    "color-string": ">=1.5.5",
-    "trim-newlines": ">=3.0.1",
-    "glob-parent": ">=5.1.2",
-    "sockjs": ">=0.3.20",
-    "merge": ">=2.1.1",
-    "is-svg": ">=4.2.2",
-    "react-dev-utils": ">=11.0.4",
-    "node-notifier": ">=8.0.1",
-    "mem": ">=4.0.0",
-    "webpack-dev-server": ">=3.1.11"
+    "@angular/animations": "~12.2.0",
+    "@angular/common": "~12.2.0",
+    "@angular/compiler": "~12.2.0",
+    "@angular/core": "~12.2.0",
+    "@angular/forms": "~12.2.0",
+    "@angular/platform-browser": "~12.2.0",
+    "@angular/platform-browser-dynamic": "~12.2.0",
+    "@angular/router": "~12.2.0",
+    "rxjs": "~6.6.0",
+    "tslib": "^2.3.0",
+    "zone.js": "~0.11.4"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom --verbose=true",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": [
-    "last 2 versions",
-    "android 4",
-    "opera 12"
-  ]
+  "devDependencies": {
+    "@angular-devkit/build-angular": "~12.2.5",
+    "@angular/cli": "~12.2.5",
+    "@angular/compiler-cli": "~12.2.0",
+    "@types/jasmine": "~3.8.0",
+    "@types/node": "^12.11.1",
+    "jasmine-core": "~3.8.0",
+    "karma": "~6.3.0",
+    "karma-chrome-launcher": "~3.1.0",
+    "karma-coverage": "~2.0.3",
+    "karma-jasmine": "~4.0.0",
+    "karma-jasmine-html-reporter": "~1.7.0",
+    "karma-opera-launcher": "^1.0.0",
+    "typescript": "~4.3.5"
+  }
 }
