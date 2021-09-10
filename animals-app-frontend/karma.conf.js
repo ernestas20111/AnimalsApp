@@ -11,7 +11,7 @@ module.exports = function (config) {
       require('karma-jasmine-html-reporter'),
       require('karma-coverage'),
       require('@angular-devkit/build-angular/plugins/karma'),
-	  require('karma-opera-launcher')
+	  require( 'karma-opera-launcher' )
     ],
     client: {
       jasmine: {
@@ -38,7 +38,13 @@ module.exports = function (config) {
     colors: true,
     logLevel: config.LOG_INFO,
     autoWatch: true,
-    browsers: ['Opera'],
+	browsers: ['Opera', 'ChromeHeadlessCustom'],
+    customLaunchers: {
+        ChromeHeadlessCustom: {
+            base: 'ChromeHeadless',
+            flags: ['--no-sandbox', '--disable-gpu']
+        }
+    },
     restartOnFileChange: true
   });
 };
