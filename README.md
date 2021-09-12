@@ -27,7 +27,7 @@ To run program, firstly install dependencies (node_modules): `npm install`
 and then you can run the program: `npm run start` or `ng serve --open`
 
 ---
-Additional information can be found here: https://github.com/ernestas20111/AnimalsApp/discussions/48
+Additional information can be found here: [Program Setup]https://github.com/ernestas20111/AnimalsApp/discussions/48
 
 ## Naming conventions
 Please read about our naming conventions before starting contributing to the project:
