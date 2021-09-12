@@ -31,7 +31,7 @@ Additional information can be found here: [Program setup](https://github.com/ern
 
 ## Naming conventions
 Please read about our naming conventions before starting contributing to the project:
-https://github.com/ernestas20111/AnimalsApp/discussions/65
+[Naming conventions](https://github.com/ernestas20111/AnimalsApp/discussions/65)
 
 ## Database ER diagram
 
