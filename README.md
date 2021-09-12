@@ -20,9 +20,10 @@ Add it to user secrets:
 }
 ```
 ---
-To run program, firstly install dependencies (node_modules): `npm install`
 
+To run program, firstly install dependencies (node_modules): `npm install`
 and then you can run the program: `npm run start` or `ng serve --open`
+
 ---
 Additional information can be found here: [Program setup](https://github.com/ernestas20111/AnimalsApp/discussions/48)
 
