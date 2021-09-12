@@ -22,6 +22,7 @@ Add it to user secrets:
 ---
 
 To run program, firstly install dependencies (node_modules): `npm install`
+
 and then you can run the program: `npm run start` or `ng serve --open`
 
 ---
