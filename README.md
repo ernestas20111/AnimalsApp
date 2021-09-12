@@ -2,7 +2,7 @@
 E-shop to find animals or to gift them
 
 
-## Team members:
+## Team members
 - Nerijus Pūras
 - Ernestas Ščevinskas
 - Vilius Macijauskas
@@ -10,7 +10,7 @@ E-shop to find animals or to gift them
 - Justas Vitkauskas
 - Juozas Vainauskas
 
-## Program setup:
+## Program setup
 Add it to user secrets:
 ```
 {
