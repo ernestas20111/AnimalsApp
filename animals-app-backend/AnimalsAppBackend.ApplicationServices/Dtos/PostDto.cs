@@ -1,5 +1,4 @@
-﻿using AnimalsAppBackend.Abstractions;
-using System;
+﻿using System;
 
 namespace AnimalsAppBackend.ApplicationServices.Dtos
 {

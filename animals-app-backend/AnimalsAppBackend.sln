@@ -4,20 +4,32 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 16.0.31205.134
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AnimalsAppBackend", "AnimalsAppBackend\AnimalsAppBackend.csproj", "{2138514B-4733-472D-8187-E4250177CBCF}"
+	ProjectSection(ProjectDependencies) = postProject
+		{A3BBDE13-D5BD-458F-BC3F-7CCFD093C321} = {A3BBDE13-D5BD-458F-BC3F-7CCFD093C321}
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AnimalsAppBackend.Infrastructure", "AnimalsAppBackend.Infrastructure\AnimalsAppBackend.Infrastructure.csproj", "{1D4B2577-E6C6-40CE-A86C-8B4B54961F36}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AnimalsAppBackend.Domain", "AnimalsAppBackend.Domain\AnimalsAppBackend.Domain.csproj", "{885B6705-ABE6-44BA-B5FB-6192697265F2}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AnimalsAppBackend.DataAccess", "AnimalsAppBackend.DataAccess\AnimalsAppBackend.DataAccess.csproj", "{AFD1294D-01E3-4546-9409-954F45C9C361}"
+	ProjectSection(ProjectDependencies) = postProject
+		{A3BBDE13-D5BD-458F-BC3F-7CCFD093C321} = {A3BBDE13-D5BD-458F-BC3F-7CCFD093C321}
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AnimalsAppBackend.ApplicationUtilities", "AnimalsAppBackend.ApplicationUtilities\AnimalsAppBackend.ApplicationUtilities.csproj", "{A3BBDE13-D5BD-458F-BC3F-7CCFD093C321}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AnimalsAppBackend.Abstractions", "AnimalsAppBackend.Abstractions\AnimalsAppBackend.Abstractions.csproj", "{D3C33F45-8B45-4462-9E1C-9F1AB49254FC}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AnimalsAppBackend.Tests", "AnimalsAppBackend.Tests\AnimalsAppBackend.Tests.csproj", "{A26511CB-3479-4CA5-92ED-3CFEE32777F1}"
+	ProjectSection(ProjectDependencies) = postProject
+		{A3BBDE13-D5BD-458F-BC3F-7CCFD093C321} = {A3BBDE13-D5BD-458F-BC3F-7CCFD093C321}
+	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnimalsAppBackend.ApplicationServices", "AnimalsAppBackend.ApplicationServices\AnimalsAppBackend.ApplicationServices.csproj", "{CF78E4F0-CE3D-4C7D-B693-51E0AEBF4B8C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AnimalsAppBackend.ApplicationServices", "AnimalsAppBackend.ApplicationServices\AnimalsAppBackend.ApplicationServices.csproj", "{CF78E4F0-CE3D-4C7D-B693-51E0AEBF4B8C}"
+	ProjectSection(ProjectDependencies) = postProject
+		{A3BBDE13-D5BD-458F-BC3F-7CCFD093C321} = {A3BBDE13-D5BD-458F-BC3F-7CCFD093C321}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

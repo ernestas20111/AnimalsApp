@@ -1,9 +1,7 @@
-using AnimalsAppBackend.Abstractions;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
+using AnimalsAppBackend.ApplicationUtilities.Validators;
 using Xunit;
 
-namespace AnimalsAppBackend.Tests.ApplicationUtilities
+namespace AnimalsAppBackend.Tests.ApplicationUtilities.Validators
 {
     public class EmailValidationAttributeTests
     {
@@ -11,7 +9,7 @@ namespace AnimalsAppBackend.Tests.ApplicationUtilities
         [InlineData("nice@gmail.com")]
         [InlineData("n@gmail.com")]
         [InlineData("coolStuff201211@gmail.com")]
-        public void TestIfPasswordIsValid_ShouldPass(string email)
+        public void TestIfEmailIsValid_ShouldPass(string email)
         {
             //Arrange
             object value = email;
@@ -28,7 +26,7 @@ namespace AnimalsAppBackend.Tests.ApplicationUtilities
         [InlineData("@gmail.com")]
         [InlineData("n@hotmail.co")]
         [InlineData("coolStuff201211@g.c")]
-        public void TestIfPasswordIsValid_ShouldFail(string email)
+        public void TestIfEmailIsValid_ShouldFail(string email)
         {
             //Arrange
             object value = email;

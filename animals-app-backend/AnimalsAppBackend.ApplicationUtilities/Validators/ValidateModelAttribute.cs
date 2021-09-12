@@ -1,9 +1,10 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using AnimalsAppBackend.Abstractions;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace AnimalsAppBackend.Abstractions
+namespace AnimalsAppBackend.ApplicationUtilities.Validators
 {
     public class ValidateModelAttribute : ActionFilterAttribute
     {

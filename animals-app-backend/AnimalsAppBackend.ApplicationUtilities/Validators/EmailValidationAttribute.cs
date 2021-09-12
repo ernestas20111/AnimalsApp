@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.Text.RegularExpressions;
 
-namespace AnimalsAppBackend.Abstractions
+namespace AnimalsAppBackend.ApplicationUtilities.Validators
 {
     public class EmailValidationAttribute : ValidationAttribute
     {
