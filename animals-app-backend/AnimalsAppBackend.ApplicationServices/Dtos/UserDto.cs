@@ -1,4 +1,4 @@
-﻿using AnimalsAppBackend.Abstractions;
+﻿using AnimalsAppBackend.ApplicationUtilities.Validators;
 using System;
 
 namespace AnimalsAppBackend.ApplicationServices.Dtos

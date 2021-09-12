@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\AnimalsAppBackend.Abstractions\AnimalsAppBackend.Abstractions.csproj" />
+    <ProjectReference Include="..\AnimalsAppBackend.ApplicationUtilities\AnimalsAppBackend.ApplicationUtilities.csproj" />
     <ProjectReference Include="..\AnimalsAppBackend.DataAccess\AnimalsAppBackend.DataAccess.csproj" />
     <ProjectReference Include="..\AnimalsAppBackend.Domain\AnimalsAppBackend.Domain.csproj" />
   </ItemGroup>
