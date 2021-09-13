@@ -9,7 +9,9 @@ namespace AnimalsAppBackend.Controllers
 {
     [ApiController]
     [ValidateModel]
-    [Route("[controller]")]
+    [Route("[controller]", Order = 1)]
+    [Route("api/v{version:apiVersion}/[controller]", Order = 2)]
+    [ApiVersion("1")]
     public class UserDetailsController : ControllerBase
     {
         private readonly IUserDetailsManagementService _userDetailsManagementService;
@@ -20,6 +22,7 @@ namespace AnimalsAppBackend.Controllers
         }
 
         [HttpGet("{userId}")]
+        [MapToApiVersion("1")]
         public async Task<IActionResult> Get(Guid userId)
         {
             var result = await _userDetailsManagementService.GetUserDetails(userId);
@@ -31,6 +34,7 @@ namespace AnimalsAppBackend.Controllers
         }
 
         [HttpPost]
+        [MapToApiVersion("1")]
         public async Task<IActionResult> Add(UserDetailsDto userDetailsDto)
         {
             var result = await _userDetailsManagementService.AddUserDetails(userDetailsDto);
@@ -43,6 +47,7 @@ namespace AnimalsAppBackend.Controllers
         }
 
         [HttpPut("{id}")]
+        [MapToApiVersion("1")]
         public async Task<IActionResult> Update(Guid id, [FromBody] UserDetailsDto userDetailsDto)
         {
             userDetailsDto.Id = id;
@@ -56,6 +61,7 @@ namespace AnimalsAppBackend.Controllers
         }
 
         [HttpDelete("{id}")]
+        [MapToApiVersion("1")]
         public async Task<IActionResult> Delete(Guid id)
         {
             var result = await _userDetailsManagementService.RemoveUserDetails(id);
