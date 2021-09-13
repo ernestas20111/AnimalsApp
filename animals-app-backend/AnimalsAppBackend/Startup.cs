@@ -5,8 +5,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using AnimalsAppBackend.DataAccess;
-using System;
 using AnimalsAppBackend.Infrastructure;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Versioning;
 
 namespace AnimalsAppBackend
 {
@@ -29,6 +30,14 @@ namespace AnimalsAppBackend
                 options.UseSqlServer(Configuration.GetConnectionString("Database"));
             }, ServiceLifetime.Transient);
             services.AddControllers();
+            
+            services.AddApiVersioning(config =>
+            {
+                config.DefaultApiVersion = new ApiVersion(1, 0);
+                config.AssumeDefaultVersionWhenUnspecified = true;
+                config.ReportApiVersions = true;
+                config.ApiVersionReader = new HeaderApiVersionReader("api-version");
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
