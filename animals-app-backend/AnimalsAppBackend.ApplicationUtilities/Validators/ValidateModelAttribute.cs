@@ -18,7 +18,7 @@ namespace AnimalsAppBackend.ApplicationUtilities.Validators
             }
         }
 
-        private Result<string> GetErrorResult(ActionExecutingContext context)
+        private static Result<string> GetErrorResult(ActionExecutingContext context)
 		{
 			if (context.ModelState.ErrorCount == 1)
 			{
@@ -30,13 +30,13 @@ namespace AnimalsAppBackend.ApplicationUtilities.Validators
 			}
 		}
 		
-		private Result<string> GetSingleErrorResult(ActionExecutingContext context)
+		private static Result<string> GetSingleErrorResult(ActionExecutingContext context)
 		{
 			string errorMessage = context.ModelState.Values.First().Errors.First().ErrorMessage;
 			return Result<string>.CreateErrorResult(errorMessage);
 		}
 		
-		private Result<string> GetMultipleErrorsResult(ActionExecutingContext context)
+		private static Result<string> GetMultipleErrorsResult(ActionExecutingContext context)
 		{
 			Result<string> result = Result<string>.Create(null);
 			IEnumerable<string> allErrorMessages = context.ModelState.Values.SelectMany(v => v.Errors).Select(v => v.ErrorMessage);
