@@ -1,7 +1,7 @@
-using AnimalsAppBackend.ApplicationUtilities.Validators;
+using AnimalsAppBackend.ApplicationUtilities.ValidationAttributes;
 using Xunit;
 
-namespace AnimalsAppBackend.Tests.ApplicationUtilities.Validators
+namespace AnimalsAppBackend.Tests.ApplicationUtilities.ValidationAttributes
 {
     public class PhoneValidationAttributeTests
     {
