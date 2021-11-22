@@ -26,7 +26,7 @@ namespace AnimalsAppBackend.Abstractions
             {
                 var result = rule.Validate(input);
 
-                if (CheckIfResultIsDifferentFromDefaultOutcome(result))
+                if (IsDifferentFromDefaultOutcome(result))
                 {
                     return result;
                 }
@@ -34,11 +34,11 @@ namespace AnimalsAppBackend.Abstractions
             return _defaultOutcomeResult;
         }
 
-        private bool CheckIfResultIsDifferentFromDefaultOutcome(T result)
+        private bool IsDifferentFromDefaultOutcome(T result)
         {
-            return result is null && _defaultOutcomeResult is object
-                || result is object && _defaultOutcomeResult is null
-                || result is object && _defaultOutcomeResult is object && !result.Equals(_defaultOutcomeResult);
+            return (result is null && _defaultOutcomeResult is object)
+                || (result is object && _defaultOutcomeResult is null)
+                || (result is object && _defaultOutcomeResult is object && !result.Equals(_defaultOutcomeResult));
         }
     }
 }
