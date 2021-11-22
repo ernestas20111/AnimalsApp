@@ -3,21 +3,29 @@ using System.Linq;
 
 namespace AnimalsAppBackend.Abstractions
 {
-    public class OrOperatorRule<T, R> : IBaseRule<T, R>
+    public class OrOperatorRule<T,TResult> : IBaseRule<T,TResult>
     {
-        private readonly List<IBaseRule<T, R>> _rules;
+        private readonly List<IBaseRule<T,TResult>> _rules;
 
-        public OrOperatorRule(params IBaseRule<T, R>[] rules)
+        private readonly TResult _defaultErrorResult;
+
+        public OrOperatorRule(params IBaseRule<T,TResult>[] rules)
         {
-            _rules = new List<IBaseRule<T, R>>(rules);
+            _rules = new List<IBaseRule<T,TResult>>(rules);
         }
 
-        public bool IsValid(R input)
+        public OrOperatorRule(TResult defaultErrorResult, params IBaseRule<T, TResult>[] rules)
+        {
+            _defaultErrorResult = defaultErrorResult;
+            _rules = new List<IBaseRule<T, TResult>>(rules);
+        }
+
+        public virtual bool IsValid(T input)
         {
             return _rules.Any(rule => rule.IsValid(input));
         }
 
-        public T Validate(R input)
+        public virtual TResult Validate(T input)
         {
             if (IsValid(input))
             {

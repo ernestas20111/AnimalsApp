@@ -39,10 +39,7 @@ namespace AnimalsAppBackend.ApplicationUtilities.ValidationAttributes
         {
             Result<string> result = Result<string>.Create(null);
             IEnumerable<string> allErrorMessages = context.ModelState.Values.SelectMany(v => v.Errors).Select(v => v.ErrorMessage);
-            foreach (var errorMessage in allErrorMessages)
-            {
-                result.AddError(errorMessage);
-            }
+            result.AddErrorsRange(allErrorMessages);
             return result;
         }
     }

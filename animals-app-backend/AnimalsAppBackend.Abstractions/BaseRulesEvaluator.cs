@@ -2,25 +2,25 @@
 
 namespace AnimalsAppBackend.Abstractions
 {
-    public class BaseRulesEvaluator<T, R>
+    public class BaseRulesEvaluator<T,TResult>
     {
-        private readonly List<IBaseRule<T, R>> _rules;
+        private readonly List<IBaseRule<T,TResult>> _rules;
 
-        private readonly T _defaultOutcomeResult;
+        private readonly TResult _defaultOutcomeResult;
 
-        public BaseRulesEvaluator(T defaultOutcomeResult)
+        public BaseRulesEvaluator(TResult defaultOutcomeResult)
         {
-            _rules = new List<IBaseRule<T, R>>();
+            _rules = new List<IBaseRule<T,TResult>>();
             _defaultOutcomeResult = defaultOutcomeResult;
         }
 
-        public virtual BaseRulesEvaluator<T, R> AddRule(IBaseRule<T, R> rule)
+        public virtual BaseRulesEvaluator<T,TResult> AddRule(IBaseRule<T,TResult> rule)
         {
             _rules.Add(rule);
             return this;
         }
 
-        public virtual T Evaluate(R input)
+        public virtual TResult Evaluate(T input)
         {
             foreach (var rule in _rules)
             {
@@ -34,7 +34,7 @@ namespace AnimalsAppBackend.Abstractions
             return _defaultOutcomeResult;
         }
 
-        private bool IsDifferentFromDefaultOutcome(T result)
+        private bool IsDifferentFromDefaultOutcome(TResult result)
         {
             return (result is null && _defaultOutcomeResult is object)
                 || (result is object && _defaultOutcomeResult is null)
