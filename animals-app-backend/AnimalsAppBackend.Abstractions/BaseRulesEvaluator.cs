@@ -26,19 +26,12 @@ namespace AnimalsAppBackend.Abstractions
             {
                 var result = rule.Validate(input);
 
-                if (IsDifferentFromDefaultOutcome(result))
+                if (GenericTypesUtilities<TResult>.Equals(result, _defaultOutcomeResult))
                 {
                     return result;
                 }
             }
             return _defaultOutcomeResult;
-        }
-
-        private bool IsDifferentFromDefaultOutcome(TResult result)
-        {
-            return (result is null && _defaultOutcomeResult is object)
-                || (result is object && _defaultOutcomeResult is null)
-                || (result is object && _defaultOutcomeResult is object && !result.Equals(_defaultOutcomeResult));
         }
     }
 }

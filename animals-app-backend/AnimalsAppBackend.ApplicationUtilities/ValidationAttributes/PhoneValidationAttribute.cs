@@ -13,9 +13,9 @@ namespace AnimalsAppBackend.ApplicationUtilities.ValidationAttributes
             return new BaseRulesEvaluator<string, ValidationResult>(ValidationResult.Success)
                 .AddRule(new EmptyTextInputValidationRule("Phone can not be empty."))
                 .AddRule(
-                    new OrOperatorRule<string, ValidationResult>
+                    new OrOperatorRuleWithErrorResult<string, ValidationResult>
                     (
-                        new ValidationResult("Phone is in the wrong form it must start with +370 or 86."),
+                        new ValidationResult("Phone is in the wrong form it must start with +370 or 8."),
                         new GlobalPhoneValidationRule(),
                         new LocalPhoneValidationRule()
                     )

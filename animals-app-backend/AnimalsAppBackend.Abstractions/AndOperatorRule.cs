@@ -7,17 +7,9 @@ namespace AnimalsAppBackend.Abstractions
     {
         private readonly List<IBaseRule<T,TResult>> _rules;
 
-        private readonly TResult _defaultErrorResult;
-
         public AndOperatorRule(params IBaseRule<T,TResult>[] rules)
         {
             _rules = new List<IBaseRule<T,TResult>>(rules);
-        }
-
-        public AndOperatorRule(TResult defaultErrorResult, params IBaseRule<T, TResult>[] rules)
-        {
-            _defaultErrorResult = defaultErrorResult;
-            _rules = new List<IBaseRule<T, TResult>>(rules);
         }
 
         public virtual bool IsValid(T input)
