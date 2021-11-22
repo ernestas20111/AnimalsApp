@@ -2,7 +2,7 @@
 
 namespace AnimalsAppBackend.ApplicationUtilities.ValidationRules
 {
-    class EmptyTextInputValidationRule : IBaseRule<ValidationResult, string>, ValidationRule<string>
+    class EmptyTextInputValidationRule : ValidationRule<string>
     {
         public EmptyTextInputValidationRule(string errorMessage) : base(errorMessage)
         {
@@ -14,20 +14,7 @@ namespace AnimalsAppBackend.ApplicationUtilities.ValidationRules
 
         public bool IsValid(string input)
         {
-            if (!string.IsNullOrWhiteSpace(input))
-            {
-                return true;
-            }
-            return false;
-        }
-
-        public ValidationResult Validate(string input)
-        {
-            if (IsValid(input))
-            {
-                return ValidationResult.Success;
-            }
-            return new ValidationResult(_errorMessage);
+            return IsValid(input, (input) => !string.IsNullOrWhiteSpace(input));
         }
     }
 }
