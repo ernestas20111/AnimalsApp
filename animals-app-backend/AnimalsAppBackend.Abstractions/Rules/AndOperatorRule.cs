@@ -5,11 +5,11 @@ namespace AnimalsAppBackend.Abstractions.Rules
 {
     public class AndOperatorRule<T, TResult> : IValidationRule<T, TResult>
     {
-        private readonly List<IBaseRule<T, TResult>> _rules;
+        private readonly List<IValidationRule<T, TResult>> _rules;
 
-        public AndOperatorRule(params IBaseRule<T, TResult>[] rules)
+        public AndOperatorRule(params IValidationRule<T, TResult>[] rules)
         {
-            _rules = new List<IBaseRule<T, TResult>>(rules);
+            _rules = new List<IValidationRule<T, TResult>>(rules);
         }
 
         public virtual bool IsValid(T input)
