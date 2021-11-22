@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace AnimalsAppBackend.Abstractions.Rules
 {
-    public class AndOperatorRule<T, TResult> : IBaseRule<T, TResult>
+    public class AndOperatorRule<T, TResult> : IValidationRule<T, TResult>
     {
         private readonly List<IBaseRule<T, TResult>> _rules;
 
