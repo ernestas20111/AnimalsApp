@@ -3,7 +3,7 @@ using System.Text.RegularExpressions;
 
 namespace AnimalsAppBackend.ApplicationUtilities.ValidationRules
 {
-    class ValidationRule<T> : IBaseRule<ValidationResult, T>
+    abstract class ValidationRule<T> : IBaseRule<ValidationResult, T>
     {
         private readonly string _errorMessage;
 
@@ -12,14 +12,7 @@ namespace AnimalsAppBackend.ApplicationUtilities.ValidationRules
             _errorMessage = errorMessage;
         }
 
-        sealed public bool IsValid(T input, Func<T, bool> condition)
-        {
-            if (condition(input))
-            {
-                return true;
-            }
-            return false;
-        }
+        public abstract bool IsValid(T input);
 
         public virtual ValidationResult Validate(T input)
         {
