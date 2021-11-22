@@ -1,6 +1,6 @@
 ﻿namespace AnimalsAppBackend.Abstractions.Rules
 {
-    public class AndOperatorRuleWithErrorResult<T, TResult> : IValidationRule<T, TResult>, AndOperatorRule<T>
+    public class AndOperatorRuleWithErrorResult<T, TResult> : AndOperatorRule<T>, IValidationRule<T, TResult>
     {
         private readonly TResult _defaultErrorResult;
 
