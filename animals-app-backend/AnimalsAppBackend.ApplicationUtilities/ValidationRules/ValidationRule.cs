@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace AnimalsAppBackend.ApplicationUtilities.ValidationRules
 {
-    abstract class ValidationRule<T> : IBaseRule<T, ValidationResult>
+    abstract class ValidationRule<T> : IValidationRule<T, ValidationResult>
     {
         private readonly string _errorMessage;
 
