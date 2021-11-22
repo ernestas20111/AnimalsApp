@@ -5,7 +5,7 @@ namespace AnimalsAppBackend.ApplicationUtilities.ValidationRules
 {
     class ValidationRule<T> : IBaseRule<ValidationResult, T>
     {
-        protected readonly string _errorMessage;
+        private readonly string _errorMessage;
 
         public ValidationRule(string errorMessage)
         {
