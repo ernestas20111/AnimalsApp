@@ -1,5 +1,4 @@
 using System.ComponentModel.DataAnnotations;
-using System.Text.RegularExpressions;
 using AnimalsAppBackend.ApplicationUtilities.ValidationRules;
 
 namespace AnimalsAppBackend.ApplicationUtilities.ValidationAttributes
@@ -12,7 +11,7 @@ namespace AnimalsAppBackend.ApplicationUtilities.ValidationAttributes
             
             return new BaseRulesEvaluator<ValidationResult, string>(ValidationResult.Success)
                 .AddRule(new EmptyTextInputValidationRule("Email can not be empty."))
-                .AddRule(new EmailValidationRule("Email is in the wrong form."))
+                .AddRule(new EmailValidationRule())
                 .Evaluate(email);
         }
     }

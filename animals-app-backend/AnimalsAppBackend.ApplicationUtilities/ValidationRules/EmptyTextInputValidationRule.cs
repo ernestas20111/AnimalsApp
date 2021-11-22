@@ -14,11 +14,7 @@
 
         public override bool IsValid(string input)
         {
-            if (!string.IsNullOrWhiteSpace(input))
-            {
-                return true;
-            }
-            return false;
+            return !string.IsNullOrWhiteSpace(input);
         }
     }
 }

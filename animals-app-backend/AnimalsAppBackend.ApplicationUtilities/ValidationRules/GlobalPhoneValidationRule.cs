@@ -19,11 +19,7 @@ namespace AnimalsAppBackend.ApplicationUtilities.ValidationRules
             var patternWithPlus = new Regex(@"\+370\d{8}$", RegexOptions.Compiled);
             var patternWithoutPlus = new Regex(@"86\d{7}$", RegexOptions.Compiled);
 
-            if (patternWithPlus.IsMatch(input) || patternWithoutPlus.IsMatch(input))
-            {
-                return true;
-            }
-            return false;
+            return patternWithPlus.IsMatch(input) || patternWithoutPlus.IsMatch(input);
         }
     }
 }
