@@ -14,9 +14,14 @@ namespace AnimalsAppBackend.ApplicationUtilities.ValidationRules
         {
         }
 
-        public bool IsValid(string input)
+        public override bool IsValid(string input)
         {
             return IsValid(input, (input) => !string.IsNullOrWhiteSpace(input));
+            if (!string.IsNullOrWhiteSpace(input))
+            {
+                return true;
+            }
+            return false;
         }
     }
 }
