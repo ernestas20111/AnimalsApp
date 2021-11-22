@@ -1,5 +1,4 @@
 ﻿using AnimalsAppBackend.ApplicationUtilities.ValidationRules;
-using System;
 using System.Collections.Generic;
 
 namespace AnimalsAppBackend.ApplicationUtilities

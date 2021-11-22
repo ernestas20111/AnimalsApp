@@ -1,23 +1,20 @@
-using System.ComponentModel.DataAnnotations;
 using System.Text.RegularExpressions;
 
 namespace AnimalsAppBackend.ApplicationUtilities.ValidationRules
 {
-    class GlobalPhoneValidationRule : IBaseRule<ValidationResult, string>
+    class GlobalPhoneValidationRule : ValidationRule<string>
     {
-        private readonly string _errorMessage;
+        private const string _defaultErrorMessage = "Phone is in the wrong form it must start with +370 or 86.";
 
-        public GlobalPhoneValidationRule(string errorMessage)
+        public GlobalPhoneValidationRule(string errorMessage) : base(errorMessage)
         {
-            _errorMessage = errorMessage;
         }
 
-        public GlobalPhoneValidationRule()
+        public GlobalPhoneValidationRule() : base(_defaultErrorMessage)
         {
-            _errorMessage = "Phone is in the wrong form it must start with +370 or 86.";
         }
 
-        public bool IsValid(string input)
+        public override bool IsValid(string input)
         {
             var patternWithPlus = new Regex(@"\+370\d{8}$", RegexOptions.Compiled);
             var patternWithoutPlus = new Regex(@"86\d{7}$", RegexOptions.Compiled);
@@ -27,15 +24,6 @@ namespace AnimalsAppBackend.ApplicationUtilities.ValidationRules
                 return true;
             }
             return false;
-        }
-
-        public ValidationResult Validate(string input)
-        {
-            if (IsValid(input))
-            {
-                return ValidationResult.Success;
-            }
-            return new ValidationResult(_errorMessage);
         }
     }
 }
