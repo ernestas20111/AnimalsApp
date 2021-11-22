@@ -19,11 +19,11 @@ namespace AnimalsAppBackend.Abstractions
 
         public T Validate(R input)
         {
-            //if (IsValid(input))
-            //{
-            //    return _rules.FirstOrDefault().Validate(input);
-            //}
-            //return new ValidationResult(_errorMessage);
+            if (IsValid(input))
+            {
+                return _rules.FirstOrDefault(rule => rule.IsValid(input)).Validate(input);
+            }
+            return _rules.FirstOrDefault().Validate(input);
         }
     }
 }
