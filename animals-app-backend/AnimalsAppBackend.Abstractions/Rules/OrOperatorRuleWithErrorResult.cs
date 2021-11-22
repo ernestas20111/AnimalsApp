@@ -4,7 +4,7 @@
     {
         private readonly TResult _defaultErrorResult;
 
-        public OrOperatorRuleWithErrorResult(TResult defaultErrorResult, params IBaseRule<T, TResult>[] rules) : base(rules)
+        public OrOperatorRuleWithErrorResult(TResult defaultErrorResult, params IValidationRule<T, TResult>[] rules) : base(rules)
         {
             _defaultErrorResult = defaultErrorResult;
         }
