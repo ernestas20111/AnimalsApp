@@ -1,4 +1,5 @@
 ﻿using AnimalsAppBackend.ApplicationUtilities.ValidationRules;
+using AnimalsAppBackend.Abstractions;
 using System.ComponentModel.DataAnnotations;
 
 namespace AnimalsAppBackend.ApplicationUtilities.ValidationAttributes
