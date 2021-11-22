@@ -1,4 +1,4 @@
-﻿namespace AnimalsAppBackend.Abstractions
+﻿namespace AnimalsAppBackend.Abstractions.Rules
 {
     public class GenericTypesUtilities<T>
     {
@@ -9,9 +9,9 @@
 
         public static bool Equals(T left, T right)
         {
-            return (left is null && right is object)
-                || (left is object && right is null)
-                || (left is object && right is object && !left.Equals(right));
+            return left is null && right is object
+                || left is object && right is null
+                || left is object && right is object && !left.Equals(right);
         }
     }
 }

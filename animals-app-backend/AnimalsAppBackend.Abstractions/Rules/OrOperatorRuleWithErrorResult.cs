@@ -1,9 +1,6 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-
-namespace AnimalsAppBackend.Abstractions
+﻿namespace AnimalsAppBackend.Abstractions.Rules
 {
-    public class OrOperatorRuleWithErrorResult<T,TResult> : OrOperatorRule<T, TResult>
+    public class OrOperatorRuleWithErrorResult<T, TResult> : OrOperatorRule<T, TResult>
     {
         private readonly TResult _defaultErrorResult;
 

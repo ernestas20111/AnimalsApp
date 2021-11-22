@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 using AnimalsAppBackend.ApplicationUtilities.ValidationRules;
-using AnimalsAppBackend.Abstractions;
+using AnimalsAppBackend.Abstractions.Rules;
 
 namespace AnimalsAppBackend.ApplicationUtilities.ValidationAttributes
 {
