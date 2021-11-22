@@ -5,14 +5,14 @@ namespace AnimalsAppBackend.ApplicationUtilities.ValidationRules
 {
     class ValidationRule<T> : IBaseRule<ValidationResult, T>
     {
-        private readonly string _errorMessage;
+        protected readonly string _errorMessage;
 
         public ValidationRule(string errorMessage)
         {
             _errorMessage = errorMessage;
         }
 
-        sealed public bool IsValid(T input, Func<T, bool> condition)
+        sealed protected bool IsValid(T input, Func<T, bool> condition)
         {
             if (condition)
             {
