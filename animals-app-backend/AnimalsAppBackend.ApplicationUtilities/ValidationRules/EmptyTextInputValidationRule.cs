@@ -2,18 +2,14 @@
 
 namespace AnimalsAppBackend.ApplicationUtilities.ValidationRules
 {
-    class EmptyTextInputValidationRule : IBaseRule<ValidationResult, string>
+    class EmptyTextInputValidationRule : IBaseRule<ValidationResult, string>, ValidationRule<string>
     {
-        private readonly string _errorMessage;
-
-        public EmptyTextInputValidationRule(string errorMessage)
+        public EmptyTextInputValidationRule(string errorMessage) : base(errorMessage)
         {
-            _errorMessage = errorMessage;
         }
 
-        public EmptyTextInputValidationRule()
+        public EmptyTextInputValidationRule() : base("Input can not be empty.")
         {
-            _errorMessage = "Input can not be empty.";
         }
 
         public bool IsValid(string input)
