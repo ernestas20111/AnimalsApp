@@ -27,12 +27,19 @@ namespace AnimalsAppBackend.ApplicationUtilities
             {
                 var result = rule.Validate(input);
 
-                if (!result.Equals(_defaultOutcomeResult))
+                if (CheckIfResultIsDifferentFromDefaultOutcome(result))
                 {
                     return result;
                 }
             }
             return _defaultOutcomeResult;
+        }
+
+        private bool CheckIfResultIsDifferentFromDefaultOutcome(T result)
+        {
+            return (result is null && _defaultOutcomeResult is object) 
+                || (result is object && _defaultOutcomeResult is null) 
+                || (result is object && _defaultOutcomeResult is object && !result.Equals(_defaultOutcomeResult));
         }
     }
 }

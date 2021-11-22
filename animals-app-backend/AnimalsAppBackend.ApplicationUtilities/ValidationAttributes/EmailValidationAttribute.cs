@@ -8,7 +8,7 @@ namespace AnimalsAppBackend.ApplicationUtilities.ValidationAttributes
         protected override ValidationResult IsValid(object value, ValidationContext validationContext)
         {
             var email = value as string;
-            
+
             return new BaseRulesEvaluator<ValidationResult, string>(ValidationResult.Success)
                 .AddRule(new EmptyTextInputValidationRule("Email can not be empty."))
                 .AddRule(new EmailValidationRule())
