@@ -1,9 +1,7 @@
 ﻿namespace AnimalsAppBackend.Abstractions.Rules
 {
-    public interface IValidationRule<T, TResult>
+    public interface IValidationRule<T, TResult> : IBaseRule<T>
     {
-        bool IsValid(T input);
-
         TResult Validate(T input);
     }
 }
