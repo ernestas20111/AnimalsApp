@@ -1,6 +1,6 @@
 ﻿namespace AnimalsAppBackend.Abstractions.Rules
 {
-    public class AndOperatorRuleWithErrorResult<T, TResult> : IValidationRule<T, TResult>, AndOperatorRule<T, TResult>
+    public class AndOperatorRuleWithErrorResult<T, TResult> : IValidationRule<T, TResult>, AndOperatorRule<T>
     {
         private readonly TResult _defaultErrorResult;
 
@@ -13,7 +13,7 @@
         {
             if (IsValid(input))
             {
-                return base.Validate(input);
+                return _rules.FirstOrDefault().Validate(input);
             }
             return _defaultErrorResult;
         }
