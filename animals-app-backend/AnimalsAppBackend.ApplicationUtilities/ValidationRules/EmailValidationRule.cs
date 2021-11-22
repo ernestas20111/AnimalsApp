@@ -21,7 +21,7 @@ namespace AnimalsAppBackend.ApplicationUtilities.ValidationRules
         {
             var pattern = new Regex(@"([a-zA-Z0-9._-]*[a-zA-Z0-9][a-zA-Z0-9._-]*)(@gmail.com)$", RegexOptions.Compiled);
 
-            if (pattern.IsMatch(email))
+            if (pattern.IsMatch(input))
             {
                 return true;
             }
