@@ -1,24 +1,27 @@
 using System.ComponentModel.DataAnnotations;
+using System.Text.RegularExpressions;
 
 namespace AnimalsAppBackend.ApplicationUtilities.ValidationRules
 {
-    class BadText : IBaseRule<ValidationResult, string>
+    class EmailValidationRule : IBaseRule<ValidationResult, string>
     {
         private readonly string _errorMessage;
 
-        public BadText(string errorMessage)
+        public EmailValidationRule(string errorMessage)
         {
             _errorMessage = errorMessage;
         }
 
-        public BadText()
+        public EmailValidationRule()
         {
-            _errorMessage = "Input can not be empty.";
+            _errorMessage = "Email is in the wrong form.";
         }
 
         public bool IsValid(string input)
         {
-            if (!string.IsNullOrWhiteSpace(input))
+            var pattern = new Regex(@"([a-zA-Z0-9._-]*[a-zA-Z0-9][a-zA-Z0-9._-]*)(@gmail.com)$", RegexOptions.Compiled);
+
+            if (pattern.IsMatch(email))
             {
                 return true;
             }
