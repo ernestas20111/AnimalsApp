@@ -2,19 +2,19 @@
 
 namespace AnimalsAppBackend.Abstractions.Rules
 {
-    public class BaseRulesEvaluator<T, TResult>
+    public class ValidationRulesEvaluator<T, TResult>
     {
-        private readonly List<IBaseRule<T, TResult>> _rules;
+        private readonly List<IValidationRule<T, TResult>> _rules;
 
         private readonly TResult _defaultOutcomeResult;
 
-        public BaseRulesEvaluator(TResult defaultOutcomeResult)
+        public ValidationRulesEvaluator(TResult defaultOutcomeResult)
         {
-            _rules = new List<IBaseRule<T, TResult>>();
+            _rules = new List<IValidationRule<T, TResult>>();
             _defaultOutcomeResult = defaultOutcomeResult;
         }
 
-        public virtual BaseRulesEvaluator<T, TResult> AddRule(IBaseRule<T, TResult> rule)
+        public virtual ValidationRulesEvaluator<T, TResult> AddRule(IValidationRule<T, TResult> rule)
         {
             _rules.Add(rule);
             return this;
