@@ -14,7 +14,7 @@ namespace AnimalsAppBackend.ApplicationUtilities.ValidationRules
 
         sealed public bool IsValid(T input, Func<T, bool> condition)
         {
-            if (condition)
+            if (condition(input))
             {
                 return true;
             }
