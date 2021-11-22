@@ -12,7 +12,7 @@ namespace AnimalsAppBackend.ApplicationUtilities.ValidationRules
             _errorMessage = errorMessage;
         }
 
-        sealed protected bool IsValid(T input, Func<T, bool> condition)
+        sealed public bool IsValid(T input, Func<T, bool> condition)
         {
             if (condition)
             {
