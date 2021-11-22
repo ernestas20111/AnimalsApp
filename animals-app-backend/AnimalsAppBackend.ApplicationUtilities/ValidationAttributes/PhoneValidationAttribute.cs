@@ -11,15 +11,10 @@ namespace AnimalsAppBackend.ApplicationUtilities.ValidationAttributes
             var patternWithoutPlus = new Regex(@"86\d{7}$", RegexOptions.Compiled);
             var phone = value as string;
 
-            if (string.IsNullOrWhiteSpace(phone))
-            {
-                return new ValidationResult("Phone can not be empty.");
-            }
-            else if (!patternWithPlus.IsMatch(phone) & !patternWithoutPlus.IsMatch(phone))
-            {
-                return new ValidationResult("Phone is in the wrong form it must start with +370 or 86.");
-            }
-            else return ValidationResult.Success;
+            return new BaseRulesEvaluator<ValidationResult, string>(ValidationResult.Success)
+                       .AddRule(new EmptyTextInputValidationRule("Phone can not be empty."))
+                       .AddRule(new GlobalPhoneValidationRule("Phone is in the wrong form it must start with +370 or 86."))
+                       .Evaluate(phone);
         }
     }
 }
