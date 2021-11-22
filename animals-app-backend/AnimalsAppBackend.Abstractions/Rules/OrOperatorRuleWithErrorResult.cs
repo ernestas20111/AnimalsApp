@@ -1,6 +1,6 @@
 ﻿namespace AnimalsAppBackend.Abstractions.Rules
 {
-    public class OrOperatorRuleWithErrorResult<T, TResult> : IValidationRule<T, TResult>, OrOperatorRule<T>
+    public class OrOperatorRuleWithErrorResult<T, TResult> : OrOperatorRule<T>, IValidationRule<T, TResult>
     {
         private readonly TResult _defaultErrorResult;
 
@@ -9,7 +9,7 @@
             _defaultErrorResult = defaultErrorResult;
         }
 
-        public override TResult Validate(T input)
+        public virtual TResult Validate(T input)
         {
             if (IsValid(input))
             {
