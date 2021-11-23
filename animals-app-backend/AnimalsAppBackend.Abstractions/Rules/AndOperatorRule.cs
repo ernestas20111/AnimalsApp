@@ -5,16 +5,16 @@ namespace AnimalsAppBackend.Abstractions.Rules
 {
     public class AndOperatorRule<T> : IBaseRule<T>
     {
-        protected readonly List<IBaseRule<T>> rules;
+        private readonly List<IBaseRule<T>> _rules;
 
         public AndOperatorRule(params IBaseRule<T>[] rules)
         {
-            this.rules = new List<IBaseRule<T>>(rules);
+            _rules = new List<IBaseRule<T>>(rules);
         }
 
         public virtual bool IsValid(T input)
         {
-            return rules.All(rule => rule.IsValid(input));
+            return _rules.All(rule => rule.IsValid(input));
         }
     }
 }
