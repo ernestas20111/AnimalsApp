@@ -10,9 +10,11 @@ namespace AnimalsAppBackend.ApplicationUtilities.ValidationAttributes
         {
             var email = value as string;
 
-            return new ValidationRulesEvaluator<string, ValidationResult>(ValidationResult.Success)
-                .AddRule(new EmptyTextInputValidationRule("Email can not be empty."))
-                .AddRule(new EmailValidationRule())
+            return new BaseRulesEvaluator<string, ValidationResult>()
+                .OuterAnd(
+                    new EmptyTextInputValidationRule("Email can not be empty."),
+                    new EmailValidationRule()
+                )
                 .Evaluate(email);
         }
     }
