@@ -5,10 +5,12 @@ using System.Linq;
 {
     public class OrOperatorRule<T, TResult> : IBaseRule<T, TResult>
     {
+        private readonly TResult _defaultErrorResult;
         private readonly List<IBaseRule<T, TResult>> _rules;
 
-        public OrOperatorRule(params IBaseRule<T, TResult>[] rules)
+        public OrOperatorRule(TResult defaultErrorResult, params IBaseRule<T, TResult>[] rules)
         {
+            _defaultErrorResult = defaultErrorResult
             _rules = new List<IBaseRule<T, TResult>>(rules);
         }
 
@@ -23,7 +25,7 @@ using System.Linq;
             {
                 return _rules.FirstOrDefault(rule => rule.IsValid(input)).Validate(input);
             }
-            return new TResult(string.Join(" OR ", _rules.Where(rule => !rule.IsValid(input))));
+            return _defaultErrorResult;
         }
     }
 }
