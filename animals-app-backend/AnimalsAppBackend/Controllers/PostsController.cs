@@ -22,7 +22,6 @@ namespace AnimalsAppBackend.Controllers
         }
 
         [HttpGet("{userId}")]
-        [MapToApiVersion("1")]
         public async Task<IActionResult> Get(Guid userId)
         {
             var result = await _postsManagementService.GetPostsByUserId(userId);
@@ -34,7 +33,6 @@ namespace AnimalsAppBackend.Controllers
         }
 
         [HttpGet]
-        [MapToApiVersion("1")]
         public async Task<IActionResult> GetAll()
         {
             var result = await _postsManagementService.GetAllPosts();
@@ -47,7 +45,6 @@ namespace AnimalsAppBackend.Controllers
 
 
         [HttpPost]
-        [MapToApiVersion("1")]
         public async Task<IActionResult> Add(PostDto postDto)
         {
             var result = await _postsManagementService.AddPost(postDto);
@@ -60,7 +57,6 @@ namespace AnimalsAppBackend.Controllers
         }
 
         [HttpPut("{id}")]
-        [MapToApiVersion("1")]
         public async Task<IActionResult> Update(Guid id, [FromBody] PostDto postDto)
         {
             postDto.Id = id;
@@ -74,7 +70,6 @@ namespace AnimalsAppBackend.Controllers
         }
 
         [HttpDelete("{id}")]
-        [MapToApiVersion("1")]
         public async Task<IActionResult> Delete(Guid id)
         {
             var result = await _postsManagementService.RemovePost(id);
