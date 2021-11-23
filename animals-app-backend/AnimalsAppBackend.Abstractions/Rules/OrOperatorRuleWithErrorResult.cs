@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 ﻿namespace AnimalsAppBackend.Abstractions.Rules
 {
     public class OrOperatorRuleWithErrorResult<T, TResult> : OrOperatorRule<T>, IValidationRule<T, TResult>
