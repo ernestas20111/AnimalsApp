@@ -10,7 +10,7 @@ using System.Linq;
 
         public OrOperatorRule(TResult defaultErrorResult, params IBaseRule<T, TResult>[] rules)
         {
-            _defaultErrorResult = defaultErrorResult
+            _defaultErrorResult = defaultErrorResult;
             _rules = new List<IBaseRule<T, TResult>>(rules);
         }
 
