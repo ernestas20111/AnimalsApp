@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 
 namespace AnimalsAppBackend.Abstractions
 {
@@ -32,7 +33,12 @@ namespace AnimalsAppBackend.Abstractions
 
         public void AddError(string error)
         {
-            this.Errors.Add(error);
+            Errors.Add(error);
+        }
+
+        public void AddErrorsRange(IEnumerable<string> errors)
+        {
+            Errors.AddRange(errors);
         }
     }
 }

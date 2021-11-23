@@ -1,6 +1,6 @@
 ﻿using AnimalsAppBackend.ApplicationServices;
 using AnimalsAppBackend.ApplicationServices.Dtos;
-using AnimalsAppBackend.ApplicationUtilities.Validators;
+using AnimalsAppBackend.ApplicationUtilities.ValidationAttributes;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Threading.Tasks;
