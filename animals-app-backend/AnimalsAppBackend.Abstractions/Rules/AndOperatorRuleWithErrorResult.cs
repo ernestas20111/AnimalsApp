@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 ﻿namespace AnimalsAppBackend.Abstractions.Rules
 {
     public class AndOperatorRuleWithErrorResult<T, TResult> : AndOperatorRule<T>, IValidationRule<T, TResult>
