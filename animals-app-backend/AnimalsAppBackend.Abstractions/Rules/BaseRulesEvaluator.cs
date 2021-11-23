@@ -18,9 +18,9 @@ namespace AnimalsAppBackend.Abstractions.Rules
             return this;
         }
 
-        public virtual BaseRulesEvaluator<T, TResult> AddRulesWithOrOperator(params IBaseRule<T, TResult>[] rules)
+        public virtual BaseRulesEvaluator<T, TResult> AddRulesWithOrOperator(TResult defaultErrorResult, params IBaseRule<T, TResult>[] rules)
         {
-            _rules.Add(new OrOperatorRule<T, TResult>(rules));
+            _rules.Add(new OrOperatorRule<T, TResult>(defaultErrorResult, rules));
             return this;
         }
 
