@@ -11,8 +11,9 @@ namespace AnimalsAppBackend.ApplicationUtilities.ValidationAttributes
             var phone = value as string;
 
             return new BaseRulesEvaluator<string, ValidationResult>()
-                .OuterAnd(new EmptyTextInputValidationRule("Phone can not be empty."))
-                .InnerOr(
+                .AddRule(new EmptyTextInputValidationRule("Phone can not be empty."))
+                .AddRulesWithOrOperator(
+                    new ValidationResult("")
                     new GlobalPhoneValidationRule(),
                     new LocalPhoneValidationRule()
                 )
