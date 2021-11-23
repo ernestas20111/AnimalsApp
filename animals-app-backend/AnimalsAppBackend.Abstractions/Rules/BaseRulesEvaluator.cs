@@ -12,13 +12,13 @@ namespace AnimalsAppBackend.Abstractions.Rules
             _rules = new List<IBaseRule<T, TResult>>();
         }
 
-        public virtual BaseRulesEvaluator<T, TResult> OuterAnd(params IBaseRule<T, TResult>[] rules)
+        public virtual BaseRulesEvaluator<T, TResult> AddRule(IBaseRule<T, TResult> rule)
         {
-            _rules.Add(new AndOperatorRule<T, TResult>(rules));
+            _rules.Add(rule);
             return this;
         }
 
-        public virtual BaseRulesEvaluator<T, TResult> InnerOr(params IBaseRule<T, TResult>[] rules)
+        public virtual BaseRulesEvaluator<T, TResult> AddRulesWithOrOperator(params IBaseRule<T, TResult>[] rules)
         {
             _rules.Add(new OrOperatorRule<T, TResult>(rules));
             return this;
