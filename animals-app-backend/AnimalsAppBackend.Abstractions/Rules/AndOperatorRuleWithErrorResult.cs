@@ -13,7 +13,7 @@
         {
             if (IsValid(input))
             {
-                return _rules.FirstOrDefault().Validate(input);
+                return rules.FirstOrDefault().Validate(input);
             }
             return _defaultErrorResult;
         }
