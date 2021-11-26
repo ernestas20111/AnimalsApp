@@ -12,7 +12,7 @@ namespace AnimalsAppBackend.ApplicationUtilities.ValidationAttributes
 
             return new BaseRulesEvaluator<string, ValidationResult>()
                 .AddRule(new EmptyTextInputValidationRule("Phone can not be empty."))
-                .AddRulesWithOrOperator(
+                .AddErrorResultAndRulesWithOrOperator(
                     new ValidationResult("Phone is in the wrong form it must start with +370 or 8."),
                     new GlobalPhoneValidationRule(),
                     new LocalPhoneValidationRule()

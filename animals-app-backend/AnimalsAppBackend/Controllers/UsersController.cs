@@ -22,7 +22,7 @@ namespace AnimalsAppBackend.Controllers
         }
 
         [HttpGet("{id}")]
-        [MapToApiVersion("1")]
+        //[MapToApiVersion("2")] change from api/v1 to api/v2
         public async Task<IActionResult> Get(Guid id)
         {
             var result = await _usersManagementService.GetUser(id);
@@ -34,7 +34,6 @@ namespace AnimalsAppBackend.Controllers
         }
 
         [HttpGet]
-        [MapToApiVersion("1")]
         public async Task<IActionResult> GetAll()
         {
             var result = await _usersManagementService.GetAllUsers();
@@ -46,7 +45,6 @@ namespace AnimalsAppBackend.Controllers
         }
 
         [HttpPost]
-        [MapToApiVersion("1")]
         public async Task<IActionResult> Add(UserDto userDto)
         {
             var result = await _usersManagementService.AddUser(userDto);
@@ -59,7 +57,6 @@ namespace AnimalsAppBackend.Controllers
         }
 
         [HttpPut("{id}")]
-        [MapToApiVersion("1")]
         public async Task<IActionResult> Update(Guid id, [FromBody] UserDto userDto)
         {
             userDto.Id = id;
@@ -73,7 +70,6 @@ namespace AnimalsAppBackend.Controllers
         }
 
         [HttpDelete("{id}")]
-        [MapToApiVersion("1")]
         public async Task<IActionResult> Delete(Guid id)
         {
             var result = await _usersManagementService.RemoveUser(id);
