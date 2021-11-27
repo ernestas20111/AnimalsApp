@@ -9,7 +9,8 @@ namespace AnimalsAppBackend.Infrastructure
     {
         public static void ConfigureApplicationServices(this IServiceCollection services)
         {
-            services.AddScoped<IUnitOfWork, UnitOfWork>()
+            services
+                .AddScoped<IUnitOfWork, UnitOfWork>()
                 .AddScoped<IUsersManagementService, UsersManagementService>()
                 .AddScoped<IUserDetailsManagementService, UserDetailsManagementService>()
                 .AddScoped<IPostsManagementService, PostsManagementService>()
