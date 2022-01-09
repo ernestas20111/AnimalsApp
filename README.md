@@ -1,15 +1,6 @@
 # AnimalsApp
 E-shop to find animals or to gift them
 
-
-## Team members
-- Nerijus Pūras
-- Ernestas Ščevinskas
-- Vilius Macijauskas
-- Aivaras Rinkevičius
-- Justas Vitkauskas
-- Juozas Vainauskas
-
 ## Program setup
 Add it to user secrets:
 ```
