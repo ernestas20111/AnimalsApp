@@ -31,7 +31,7 @@ namespace AnimalsAppBackend.ApplicationUtilities.ValidationAttributes
 
         private static Result<string> GetSingleErrorResult(ActionExecutingContext context)
         {
-            string errorMessage = context.ModelState.Values.First().Errors.First().ErrorMessage;
+            string errorMessage = context.ModelState.Values.SelectMany(v => v.Errors).Select(v => v.ErrorMessage).First();
             return Result<string>.CreateErrorResult(errorMessage);
         }
 
