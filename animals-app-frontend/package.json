@@ -8,8 +8,10 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test --browsers=Opera",
     "ci:test": "ng test --watch=false --browsers=ChromeHeadlessCustom --code-coverage",
-    "ci:build": "ng build --prod",
-    "lint": "ng lint"
+    "ci:build": "ng build",
+    "lint": "ng lint",
+    "prettier-check": "npx prettier --check \"**/*.ts\"",
+    "prettier-format": "npx prettier --write \"**/*.ts\""
   },
   "private": true,
   "dependencies": {
@@ -39,6 +41,8 @@
     "@typescript-eslint/eslint-plugin": "4.28.2",
     "@typescript-eslint/parser": "4.28.2",
     "eslint": "^7.26.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
     "jasmine-core": "~3.8.0",
     "karma": "~6.3.16",
     "karma-chrome-launcher": "~3.1.0",
@@ -46,6 +50,7 @@
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "~1.7.0",
     "karma-opera-launcher": "^1.0.0",
+    "prettier": "^2.6.2",
     "typescript": "~4.3.5"
   }
 }
