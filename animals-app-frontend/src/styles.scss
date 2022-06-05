@@ -14,8 +14,12 @@ $primary-font-size: 3em;
 $secondary-font-size: 2em;
 $tertiary-font-size: 1.2em;
 
+$font-size-em-equivalent-px: 62.5%;
+// https://snook.ca/archives/html_and_css/font-size-with-rem
+// 1em ~ 10px
+
 html {
-  font-size: large;
+  font-size: $font-size-em-equivalent-px;
   background-color: white;
   color: black;
 }
