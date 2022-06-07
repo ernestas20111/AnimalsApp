@@ -1,4 +1,4 @@
-@import "../styles.scss";
+@use "../styles/constants" as *;
 
 .test1 {
   font-size: $primary-font-size;
